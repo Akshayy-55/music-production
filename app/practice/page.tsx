@@ -2,15 +2,32 @@ import Link from "next/link";
 import { PRACTICE_TOOLS } from "@/lib/curriculum";
 
 export default function PracticeIndexPage() {
+  const mixer = PRACTICE_TOOLS.find((t) => t.id === "mixer")!;
+  const rest = PRACTICE_TOOLS.filter((t) => t.id !== "mixer");
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
       <h1 className="text-3xl font-bold text-white">Practice tools</h1>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Short drills powered by Tone.js in your browser. Tap play once to unlock
+        Booth and studio drills powered by Tone.js. Tap play once to unlock
         audio. Pair these with lesson checklists on Today&apos;s Practice.
       </p>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {PRACTICE_TOOLS.map((t) => (
+
+      <Link
+        href={mixer.href}
+        className="mt-8 block rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-zinc-900 via-cyan-950/30 to-violet-950/40 p-6 transition hover:border-cyan-400/50"
+      >
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          Club mixer
+        </p>
+        <h2 className="mt-1 text-2xl font-semibold text-white">{mixer.title}</h2>
+        <p className="mt-2 max-w-xl text-sm text-zinc-400">{mixer.description}</p>
+        <p className="mt-3 text-xs text-zinc-500">~{mixer.minutes} min · two looping decks</p>
+        <p className="mt-4 text-sm font-medium text-cyan-200">Step up to the booth →</p>
+      </Link>
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {rest.map((t) => (
           <Link
             key={t.id}
             href={t.href}

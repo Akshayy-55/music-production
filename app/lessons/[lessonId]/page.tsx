@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getAllLessons,
   getLesson,
+  getLessonPosition,
   getModuleForLesson,
   getNextLesson,
   getPreviousLesson,
@@ -10,6 +11,10 @@ import {
 } from "@/lib/curriculum";
 import { TrackBadge } from "@/components/TrackBadge";
 import { Checklist } from "@/components/Checklist";
+import { InstructorTip } from "@/components/InstructorTip";
+import { GearBlurb } from "@/components/GearBlurb";
+import { LessonComplete } from "@/components/LessonComplete";
+import { getInstructorTip } from "@/lib/instructor-tips";
 import { Clock, ArrowRight, ArrowLeft, ExternalLink, Wrench } from "lucide-react";
 import glossary from "@/content/glossary.json";
 
@@ -46,6 +51,42 @@ function GlossaryChips({ text }: { text: string }) {
   );
 }
 
+function LessonNav({
+  prev,
+  next,
+}: {
+  prev: ReturnType<typeof getPreviousLesson>;
+  next: ReturnType<typeof getNextLesson>;
+}) {
+  return (
+    <nav className="flex flex-wrap items-center justify-between gap-3">
+      {prev ? (
+        <Link
+          href={`/lessons/${prev.id}`}
+          className="inline-flex max-w-[46%] items-center gap-1 text-sm text-zinc-400 hover:text-white"
+        >
+          <ArrowLeft className="h-4 w-4 shrink-0" />
+          <span className="truncate">{prev.title}</span>
+        </Link>
+      ) : (
+        <span />
+      )}
+      {next ? (
+        <Link
+          href={`/lessons/${next.id}`}
+          className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500"
+        >
+          Next: {next.title} <ArrowRight className="h-4 w-4" />
+        </Link>
+      ) : (
+        <Link href="/path" className="text-sm text-violet-300 hover:text-violet-200">
+          Back to path →
+        </Link>
+      )}
+    </nav>
+  );
+}
+
 export default async function LessonPage({
   params,
 }: {
@@ -57,29 +98,44 @@ export default async function LessonPage({
   const mod = getModuleForLesson(lessonId);
   const next = getNextLesson(lessonId);
   const prev = getPreviousLesson(lessonId);
+  const pos = getLessonPosition(lessonId);
+  const tip = getInstructorTip(lesson);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-8">
-      <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
-        {mod && (
-          <Link href={`/modules/${mod.id}`} className="hover:text-zinc-300">
-            {mod.title}
-          </Link>
-        )}
-        <span>·</span>
-        <span>{lesson.id}</span>
+      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-4 py-3">
+        <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+          {mod && (
+            <Link href={`/modules/${mod.id}`} className="hover:text-zinc-200">
+              {mod.title}
+            </Link>
+          )}
+          {pos && (
+            <>
+              <span className="text-zinc-600">·</span>
+              <span className="font-medium text-zinc-200">
+                Lesson {pos.index} of {pos.total}
+              </span>
+            </>
+          )}
+          <span className="text-zinc-600">·</span>
+          <span className="text-zinc-500">{lesson.id}</span>
+        </div>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <TrackBadge track={lesson.track} />
+          <span className="inline-flex items-center gap-1 rounded-full border border-zinc-700 bg-zinc-950 px-2.5 py-0.5 text-xs text-zinc-300">
+            <Clock className="h-3.5 w-3.5" /> {lesson.estimatedMinutes} min
+          </span>
+        </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        <TrackBadge track={lesson.track} />
-        <span className="inline-flex items-center gap-1 text-xs text-zinc-500">
-          <Clock className="h-3.5 w-3.5" /> {lesson.estimatedMinutes} min
-        </span>
-      </div>
-
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-white">
+      <h1 className="mt-5 text-3xl font-bold tracking-tight text-white">
         {lesson.title}
       </h1>
+
+      <div className="mt-6">
+        <LessonNav prev={prev} next={next} />
+      </div>
 
       <section className="mt-8">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-violet-300/90">
@@ -89,6 +145,16 @@ export default async function LessonPage({
           {lesson.summary}
         </p>
       </section>
+
+      {tip && (
+        <div className="mt-6">
+          <InstructorTip>{tip}</InstructorTip>
+        </div>
+      )}
+
+      <div className="mt-6">
+        <GearBlurb track={lesson.track} />
+      </div>
 
       <section className="mt-8">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-violet-300/90">
@@ -136,9 +202,15 @@ export default async function LessonPage({
           Checklist
         </h2>
         <p className="mb-3 text-xs text-zinc-500">
-          Check all items to mark this lesson complete. Saved on this device.
+          Work the items, then mark the lesson complete. Saved on this device.
         </p>
         <Checklist lessonId={lesson.id} items={lesson.checklist} />
+        <div className="mt-4">
+          <LessonComplete
+            lessonId={lesson.id}
+            itemCount={lesson.checklist.length}
+          />
+        </div>
         <p className="mt-3 text-xs text-zinc-500">
           Checkpoint: {lesson.successCheckpoint}
         </p>
@@ -177,33 +249,9 @@ export default async function LessonPage({
         />
       </section>
 
-      <nav className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800 pt-6">
-        {prev ? (
-          <Link
-            href={`/lessons/${prev.id}`}
-            className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white"
-          >
-            <ArrowLeft className="h-4 w-4" /> {prev.title}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {next ? (
-          <Link
-            href={`/lessons/${next.id}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500"
-          >
-            Next: {next.title} <ArrowRight className="h-4 w-4" />
-          </Link>
-        ) : (
-          <Link
-            href="/path"
-            className="text-sm text-violet-300 hover:text-violet-200"
-          >
-            Back to path →
-          </Link>
-        )}
-      </nav>
+      <div className="mt-10 border-t border-zinc-800 pt-6">
+        <LessonNav prev={prev} next={next} />
+      </div>
     </article>
   );
 }

@@ -1,8 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Pause, Play } from "lucide-react";
 import { ensureAudio, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
+import { Knob } from "@/components/gear/Knob";
 
 export function EqDemo() {
   const [running, setRunning] = useState(false);
@@ -106,37 +109,18 @@ export function EqDemo() {
   };
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-      <p className="mb-4 text-sm text-zinc-400">
+    <GearChassis plate="BeatPath EQ-3 · isolator">
+      <p className="mb-5 text-sm text-zinc-400">
         A simple loop split into bass / mids / highs. Solo a band to hear where
         the kick-like body and sparkle live.{" "}
         <strong className="text-zinc-200">EQ</strong> means equalizer — boost or
-        cut frequency ranges.
+        cut frequency ranges. Same idea as the HI / MID / LOW knobs on a club mixer.
       </p>
-      {(
-        [
-          ["Bass (low)", low, setLow, "low"],
-          ["Mids", mid, setMid, "mid"],
-          ["Highs", high, setHigh, "high"],
-        ] as const
-      ).map(([label, val, setter, id]) => (
-        <label key={id} className="mb-4 block text-sm text-zinc-300">
-          <div className="mb-1 flex justify-between">
-            <span>{label}</span>
-            <span className="tabular-nums text-zinc-500">
-              {val > 0 ? `+${val}` : val} dB
-            </span>
-          </div>
-          <input
-            type="range"
-            min={-24}
-            max={12}
-            value={val}
-            onChange={(e) => setter(Number(e.target.value))}
-            className="w-full accent-violet-500"
-          />
-        </label>
-      ))}
+      <div className="mb-6 flex flex-wrap justify-center gap-6">
+        <Knob label="Low" value={low} min={-24} max={12} onChange={setLow} unit=" dB" accent="violet" />
+        <Knob label="Mid" value={mid} min={-24} max={12} onChange={setMid} unit=" dB" accent="amber" />
+        <Knob label="High" value={high} min={-24} max={12} onChange={setHigh} unit=" dB" accent="rose" />
+      </div>
 
       <div className="mb-6 flex flex-wrap gap-2">
         {(["all", "low", "mid", "high"] as const).map((s) => (
@@ -170,6 +154,13 @@ export function EqDemo() {
           </>
         )}
       </button>
-    </div>
+      <p className="mt-4 text-xs text-zinc-500">
+        Same three bands live on each strip of the{" "}
+        <Link href="/practice/mixer" className="text-cyan-300 hover:text-cyan-200">
+          2-channel mixer
+        </Link>
+        .
+      </p>
+    </GearChassis>
   );
 }

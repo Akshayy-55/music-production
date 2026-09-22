@@ -11,12 +11,13 @@ import {
 import { getLesson, PRACTICE_TOOLS } from "@/lib/curriculum";
 import { TrackBadge } from "./TrackBadge";
 import { ProgressBar } from "./ProgressBar";
+import { ProgressRing } from "./ProgressRing";
 
 export function TodayCard() {
   const { progress, ready, setFocusTrack } = useProgress();
   if (!ready) {
     return (
-      <div className="animate-pulse rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 h-64" />
+      <div className="h-64 animate-pulse rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6" />
     );
   }
 
@@ -27,39 +28,72 @@ export function TodayCard() {
   const pct = overallProgress(progress);
   const lessonMins = next?.estimatedMinutes ?? 20;
   const totalMins = lessonMins + drill.minutes;
+  const streakHot = progress.streak.count > 0;
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 via-zinc-900 to-violet-950/40 p-6 shadow-xl shadow-violet-950/20">
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+      <div className="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-zinc-900 via-zinc-950 to-violet-950/50 p-5 shadow-xl shadow-violet-950/30 sm:p-7">
+        <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-violet-300/80">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-violet-300/90">
               Today&apos;s Practice
             </p>
             <h1 className="mt-1 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              Your next 15–30 minutes
+              Continue your course
             </h1>
+            <p className="mt-1 text-sm text-zinc-400">
+              A real path: lesson → drill → checklist. About {totalMins} minutes.
+            </p>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1.5 text-sm text-orange-200">
-            <Flame className="h-4 w-4" />
-            <span>
-              {progress.streak.count} day
-              {progress.streak.count === 1 ? "" : "s"} streak
-            </span>
+          <div
+            className={`flex items-center gap-2 rounded-2xl border px-4 py-2.5 ${
+              streakHot
+                ? "border-orange-400/40 bg-orange-500/15 text-orange-100 shadow-[0_0_24px_rgba(249,115,22,0.15)]"
+                : "border-zinc-700 bg-zinc-900 text-zinc-400"
+            }`}
+          >
+            <Flame className={`h-5 w-5 ${streakHot ? "text-orange-400" : ""}`} />
+            <div>
+              <p className="text-lg font-bold tabular-nums leading-none">
+                {progress.streak.count}
+              </p>
+              <p className="text-[10px] uppercase tracking-wider">
+                day streak
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="mb-6 flex items-center gap-3 text-sm text-zinc-400">
-          <Timer className="h-4 w-4" />
-          <span>~{totalMins} min block</span>
-          <span className="text-zinc-600">·</span>
-          <span>{pct}% overall</span>
+        <div className="mb-5 flex flex-wrap items-center gap-4">
+          <ProgressRing percent={pct} size={64} />
+          <div className="min-w-[180px] flex-1">
+            <div className="mb-1 flex items-center justify-between text-xs text-zinc-400">
+              <span className="inline-flex items-center gap-1.5">
+                <Timer className="h-3.5 w-3.5" /> ~{totalMins} min block
+              </span>
+              <span className="tabular-nums">{pct}% of course</span>
+            </div>
+            <ProgressBar percent={pct} />
+          </div>
         </div>
-        <ProgressBar percent={pct} className="mb-6" />
+
+        {next ? (
+          <Link
+            href={`/lessons/${next.id}`}
+            className="mb-5 flex w-full items-center justify-center gap-2 rounded-xl bg-violet-600 px-5 py-3.5 text-base font-semibold text-white shadow-lg shadow-violet-900/40 hover:bg-violet-500"
+          >
+            Continue: {next.title}
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        ) : (
+          <p className="mb-5 rounded-xl border border-emerald-500/30 bg-emerald-950/30 px-4 py-3 text-sm text-emerald-200">
+            All lessons complete — revisit the mixer or a capstone.
+          </p>
+        )}
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-zinc-700/80 bg-zinc-950/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
               Next lesson
             </p>
             {next ? (
@@ -76,23 +110,15 @@ export function TodayCard() {
                 <p className="mt-1 line-clamp-2 text-sm text-zinc-400">
                   {next.summary}
                 </p>
-                <Link
-                  href={`/lessons/${next.id}`}
-                  className="mt-4 inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-violet-500"
-                >
-                  Start lesson <ArrowRight className="h-4 w-4" />
-                </Link>
               </>
             ) : (
-              <p className="mt-2 text-zinc-300">
-                All lessons complete — revisit tools or a capstone.
-              </p>
+              <p className="mt-2 text-zinc-300">Path finished on this device.</p>
             )}
           </div>
 
-          <div className="rounded-xl border border-zinc-700/80 bg-zinc-950/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">
-              Drill
+          <div className="rounded-xl border border-cyan-500/20 bg-zinc-950/50 p-4">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
+              Rotating drill
             </p>
             <h2 className="mt-2 text-lg font-semibold text-zinc-50">
               {drill.title}

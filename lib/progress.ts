@@ -143,6 +143,47 @@ export function moduleProgress(
   };
 }
 
+export function trackProgress(
+  state: ProgressState,
+  track: TrackId
+): { done: number; total: number; percent: number } {
+  const lessons = getAllLessons().filter((l) => l.track === track);
+  const total = lessons.length;
+  const done = lessons.filter((l) => isLessonComplete(state, l.id)).length;
+  return {
+    done,
+    total,
+    percent: total === 0 ? 0 : Math.round((done / total) * 100),
+  };
+}
+
+export function completeLesson(
+  state: ProgressState,
+  lessonId: string
+): ProgressState {
+  const lesson = getLesson(lessonId);
+  if (!lesson) return state;
+  const nextChecks = lesson.checklist.map(() => true);
+  let next: ProgressState = {
+    ...state,
+    checklist: { ...state.checklist, [lessonId]: nextChecks },
+  };
+  if (!next.completedLessons.includes(lessonId)) {
+    const completedLessons = [...next.completedLessons, lessonId];
+    next = bumpStreak({
+      ...next,
+      completedLessons,
+      unlockedExam: completedLessons.includes(UNLOCK_LESSON),
+    });
+  } else {
+    next = {
+      ...next,
+      unlockedExam: next.completedLessons.includes(UNLOCK_LESSON),
+    };
+  }
+  return next;
+}
+
 export function getNextIncompleteLesson(
   state: ProgressState
 ): string | undefined {
@@ -189,7 +230,8 @@ export type DrillId =
   | "beat-pad"
   | "eq-demo"
   | "crossfader"
-  | "ear-feel";
+  | "ear-feel"
+  | "mixer";
 
 const DRILL_ROTATION: DrillId[] = [
   "metronome",
@@ -198,6 +240,7 @@ const DRILL_ROTATION: DrillId[] = [
   "eq-demo",
   "crossfader",
   "ear-feel",
+  "mixer",
 ];
 
 export function pickDrill(state: ProgressState): DrillId {

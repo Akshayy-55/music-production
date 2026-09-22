@@ -42,6 +42,18 @@ export function getPreviousLesson(lessonId: string): Lesson | undefined {
   return all[idx - 1];
 }
 
+export function getLessonPosition(lessonId: string): {
+  index: number;
+  total: number;
+  moduleTitle: string;
+} | undefined {
+  const mod = getModuleForLesson(lessonId);
+  if (!mod) return undefined;
+  const index = mod.lessons.findIndex((l) => l.id === lessonId);
+  if (index < 0) return undefined;
+  return { index: index + 1, total: mod.lessons.length, moduleTitle: mod.title };
+}
+
 export function getLessonsByTrack(track: TrackId): Lesson[] {
   return getAllLessons().filter((l) => l.track === track);
 }
@@ -64,6 +76,13 @@ export function lessonCount(): number {
 }
 
 export const PRACTICE_TOOLS = [
+  {
+    id: "mixer",
+    title: "2-channel DJ Mixer",
+    description: "Club mixer + decks: gain, 3-band EQ, faders, cue, crossfader.",
+    href: "/practice/mixer",
+    minutes: 15,
+  },
   {
     id: "metronome",
     title: "Metronome",

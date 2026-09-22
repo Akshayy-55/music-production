@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { ensureAudio, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
 
 export function Metronome() {
   const [bpm, setBpm] = useState(120);
@@ -75,7 +76,7 @@ export function Metronome() {
   };
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+    <GearChassis plate="BeatPath CLK-1 · studio metronome">
       <div className="flex justify-center gap-3">
         {[1, 2, 3, 4].map((n) => (
           <div
@@ -100,7 +101,7 @@ export function Metronome() {
         max={180}
         value={bpm}
         onChange={(e) => setBpm(Number(e.target.value))}
-        className="mt-6 w-full accent-violet-500"
+        className="gear-slider mt-6 w-full accent-violet-500"
       />
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <button
@@ -126,6 +127,6 @@ export function Metronome() {
           Tap tempo
         </button>
       </div>
-    </div>
+    </GearChassis>
   );
 }

@@ -829,7 +829,9 @@
               "type": "docs"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m3.l5"
           ],
@@ -862,7 +864,9 @@
               "type": "docs"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m4.l1"
           ],
@@ -917,7 +921,9 @@
             "I can find cue gain/mix quickly"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m4.l2"
           ],
@@ -944,7 +950,9 @@
             "8-bar loop in and out cleanly"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m4.l4"
           ],
@@ -977,7 +985,9 @@
               "type": "docs"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m4.l5"
           ],
@@ -1019,7 +1029,9 @@
               "type": "docs"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m4.l6"
           ],
@@ -1052,7 +1064,9 @@
               "type": "docs"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m5.l1"
           ],
@@ -1078,7 +1092,9 @@
             "Corrections were small, not panic scratches"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m5.l2"
           ],
@@ -1105,7 +1121,9 @@
             "Transition 3 phrased"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m5.l3",
             "m3.l1"
@@ -1140,7 +1158,8 @@
           ],
           "practiceTools": [
             "eq-demo",
-            "crossfader"
+            "crossfader",
+            "mixer"
           ],
           "prerequisites": [
             "m5.l4",
@@ -1168,7 +1187,9 @@
             "I resisted stacking FX"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m5.l5"
           ],
@@ -1197,7 +1218,9 @@
             "Session 5"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "mixer"
+          ],
           "prerequisites": [
             "m5.l6"
           ],
@@ -2375,6 +2398,12 @@
       "mvp": true
     },
     {
+      "id": "mixer",
+      "path": "/practice/mixer",
+      "title": "2-channel DJ mixer",
+      "mvp": true
+    },
+    {
       "id": "crossfader",
       "path": "/practice/crossfader",
       "title": "Crossfader + bass kill sim",
@@ -2402,7 +2431,9 @@
       "ear-drums",
       "beat-pad",
       "eq-demo",
-      "crossfader"
+      "crossfader",
+      "ear-feel",
+      "mixer"
     ]
   },
   "researchLinks": [
