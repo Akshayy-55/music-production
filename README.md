@@ -26,7 +26,7 @@ npm run build
 npx --yes serve out
 ```
 
-GitHub Pages builds with `BASE_PATH=/music-production` so assets resolve under the project site path. Local builds omit `BASE_PATH` and run at `/`.
+Hosted site is the static export on the `gh-pages` branch (built with `BASE_PATH=/music-production`). Local builds omit `BASE_PATH` and run at `/`.
 
 ### Smoke test (against a running server)
 
