@@ -17,7 +17,7 @@ export default function AboutPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li>A stepwise curriculum (Shared → DJ | Production)</li>
           <li>Checklists + localStorage progress</li>
-          <li>Tone.js drills: metronome, beat pad, EQ, ear training</li>
+          <li>Tone.js drills: club mixer, metronome, beat pad, EQ, ear training</li>
           <li>India-friendly gear tiers in ₹ and free software first</li>
         </ul>
       </section>

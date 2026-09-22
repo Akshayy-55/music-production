@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { ensureAudio, makeHat, makeKick, makeSnare, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
 
 type Drum = "kick" | "snare" | "hat";
 const ROUNDS = 10;
@@ -96,7 +97,7 @@ export function EarDrums() {
   };
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+    <GearChassis plate="BeatPath EAR-D · drum identifier">
       <p className="mb-4 text-sm text-zinc-400">
         Listen, then tap which drum you heard. {ROUNDS} rounds — aim for ≥80%.
       </p>
@@ -178,6 +179,6 @@ export function EarDrums() {
           )}
         </>
       )}
-    </div>
+    </GearChassis>
   );
 }

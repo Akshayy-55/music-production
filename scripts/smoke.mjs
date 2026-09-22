@@ -21,6 +21,8 @@ const routes = [
   "/practice/crossfader",
   "/practice/ear-drums",
   "/practice/ear-feel",
+  "/practice/mixer",
+  "/practice/decks",
   "/glossary",
   "/gear",
   "/software",

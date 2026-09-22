@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Pause, Play } from "lucide-react";
 import { ensureAudio, makeKick, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
 
 export function CrossfaderTool() {
   const [running, setRunning] = useState(false);
@@ -119,11 +121,12 @@ export function CrossfaderTool() {
   };
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+    <GearChassis plate="BeatPath XF-1 · blend & bass kill">
       <p className="mb-4 text-sm text-zinc-400">
         Two loops, one crossfader. Kill bass on the outgoing track before you
         bring the new bass in — that&apos;s an{" "}
-        <strong className="text-zinc-200">EQ bass swap</strong>.
+        <strong className="text-zinc-200">EQ bass swap</strong>. Same strip as
+        the full mixer, distilled.
       </p>
 
       <div className="mb-6 grid grid-cols-2 gap-3">
@@ -162,7 +165,7 @@ export function CrossfaderTool() {
           max={100}
           value={xfade * 100}
           onChange={(e) => setXfade(Number(e.target.value) / 100)}
-          className="w-full accent-cyan-500"
+          className="gear-slider w-full accent-cyan-500"
         />
       </label>
 
@@ -181,6 +184,13 @@ export function CrossfaderTool() {
           </>
         )}
       </button>
-    </div>
+      <p className="mt-4 text-xs text-zinc-500">
+        Ready for the full booth?{" "}
+        <Link href="/practice/mixer" className="text-cyan-300 hover:text-cyan-200">
+          Open the 2-channel mixer
+        </Link>
+        .
+      </p>
+    </GearChassis>
   );
 }

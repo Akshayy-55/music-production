@@ -28,6 +28,9 @@ export default async function ModulePage({
       </div>
       <h1 className="mt-2 text-3xl font-bold text-white">{mod.title}</h1>
       <p className="mt-2 text-zinc-400">{mod.description}</p>
+      <p className="mt-2 text-sm text-zinc-500">
+        {mod.lessons.length} lessons in this module
+      </p>
       <ModuleLessons moduleId={mod.id} lessons={mod.lessons} track={mod.track} />
     </div>
   );

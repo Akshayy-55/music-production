@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Pause, Play, Trash2 } from "lucide-react";
 import { ensureAudio, makeHat, makeKick, makeSnare, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
 
 type Row = "kick" | "snare" | "hat";
 const STEPS = 16;
@@ -101,7 +102,7 @@ export function BeatPad() {
   ];
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 sm:p-6">
+    <GearChassis plate="BeatPath PAD-16 · drum sequencer">
       <div className="space-y-3 overflow-x-auto">
         {rows.map((row) => (
           <div key={row.id} className="flex items-center gap-2 min-w-[320px]">
@@ -178,6 +179,6 @@ export function BeatPad() {
           <Trash2 className="h-4 w-4" /> Clear
         </button>
       </div>
-    </div>
+    </GearChassis>
   );
 }

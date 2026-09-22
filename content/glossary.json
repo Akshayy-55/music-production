@@ -58,5 +58,15 @@
   {"term":"Closed-back headphones","definition":"Headphones that isolate sound — useful for DJ cueing and late-night practice without leaking."},
   {"term":"Phrase boundary","definition":"The start of a new 8/16/32-bar phrase — preferred place to begin a mix."},
   {"term":"Energy curve","definition":"How intensity rises and falls across a song or set — the emotional arc."},
-  {"term":"FOSS","definition":"Free and Open Source Software — e.g. Mixxx, LMMS. Free to use and study."}
+  {"term":"FOSS","definition":"Free and Open Source Software — e.g. Mixxx, LMMS. Free to use and study."},
+  {"term":"Channel EQ","definition":"The HI / MID / LOW knobs on a mixer channel. Cut clashing bass or harsh highs on one deck without changing the other."},
+  {"term":"Channel fader","definition":"The vertical slider that sets how loud that channel is in the mix, after gain and EQ. Ride it during transitions."},
+  {"term":"Trim","definition":"Another name for channel gain — the input level before the EQ and fader. Set it so meters sit healthy, not slamming red."},
+  {"term":"Headphone cue","definition":"PFL (pre-fader listen) button that sends a channel to your headphones so you can preview without putting it on the master / dancefloor."},
+  {"term":"PFL","definition":"Pre-Fader Listen — hearing a channel in headphones before the channel fader (and usually before the crossfader) affects the room."},
+  {"term":"Jog wheel","definition":"The large platter on a deck used to scratch, scrub, or nudge timing in tiny amounts while beatmatching."},
+  {"term":"VU meter","definition":"Level lights that show how loud a channel or the master is. Green is healthy; red means clipping — turn down gain."},
+  {"term":"Isolator","definition":"A mixer EQ style that can fully kill a band (bass, mids, or highs) when turned all the way down — classic club bass-swap tool."},
+  {"term":"Crossfader curve","definition":"How fast the blend happens as you move the crossfader. Sharp curves cut quickly (scratching); smooth curves fade slowly (blends)."},
+  {"term":"Booth","definition":"The DJ's workspace — mixer, decks, and usually a booth monitor speaker that is not the main PA."}
 ]

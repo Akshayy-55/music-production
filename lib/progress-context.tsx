@@ -15,12 +15,14 @@ import {
   saveProgress,
   setChecklistItem as setItem,
   setFocusTrack as setFocus,
+  completeLesson as completeLessonState,
 } from "./progress";
 
 interface ProgressContextValue {
   progress: ProgressState;
   ready: boolean;
   toggleChecklist: (lessonId: string, index: number) => void;
+  completeLesson: (lessonId: string) => void;
   setFocusTrack: (track: TrackId) => void;
   resetProgress: () => void;
 }
@@ -56,6 +58,10 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  const completeLesson = useCallback((lessonId: string) => {
+    setProgress((prev) => completeLessonState(prev, lessonId));
+  }, []);
+
   const setFocusTrack = useCallback((track: TrackId) => {
     setProgress((prev) => setFocus(prev, track));
   }, []);
@@ -67,8 +73,15 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const value = useMemo(
-    () => ({ progress, ready, toggleChecklist, setFocusTrack, resetProgress }),
-    [progress, ready, toggleChecklist, setFocusTrack, resetProgress]
+    () => ({
+      progress,
+      ready,
+      toggleChecklist,
+      completeLesson,
+      setFocusTrack,
+      resetProgress,
+    }),
+    [progress, ready, toggleChecklist, completeLesson, setFocusTrack, resetProgress]
   );
 
   return (

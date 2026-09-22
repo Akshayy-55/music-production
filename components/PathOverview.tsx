@@ -3,16 +3,14 @@
 import Link from "next/link";
 import { Lock, CheckCircle2 } from "lucide-react";
 import { useProgress } from "@/lib/progress-context";
-import {
-  isLessonComplete,
-  moduleProgress,
-} from "@/lib/progress";
+import { isLessonComplete, moduleProgress } from "@/lib/progress";
 import {
   curriculum,
   getModulesByTrack,
   isTrackLocked,
 } from "@/lib/curriculum";
 import { ProgressBar } from "./ProgressBar";
+import { ProgressRing } from "./ProgressRing";
 import { TrackBadge } from "./TrackBadge";
 import { UNLOCK_LESSON } from "@/lib/types";
 import type { TrackId } from "@/lib/types";
@@ -28,7 +26,10 @@ export function PathOverview() {
   return (
     <div className="space-y-10">
       {curriculum.tracks.map((track) => {
-        const locked = isTrackLocked(track.id as TrackId, progress.completedLessons);
+        const locked = isTrackLocked(
+          track.id as TrackId,
+          progress.completedLessons
+        );
         const modules = getModulesByTrack(track.id as TrackId);
         return (
           <section key={track.id}>
@@ -57,17 +58,23 @@ export function PathOverview() {
                         : "border-zinc-800 bg-zinc-900/50"
                     }`}
                   >
-                    <div className="flex flex-wrap items-start justify-between gap-2">
-                      <div>
-                        <Link
-                          href={`/modules/${mod.id}`}
-                          className="font-medium text-zinc-100 hover:text-violet-300"
-                        >
-                          {mod.title}
-                        </Link>
-                        <p className="mt-1 text-sm text-zinc-500">
-                          {mod.description} · ~{mod.estimatedHours}h
-                        </p>
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div className="flex min-w-0 items-start gap-3">
+                        <ProgressRing percent={mp.percent} size={48} />
+                        <div>
+                          <Link
+                            href={`/modules/${mod.id}`}
+                            className="font-medium text-zinc-100 hover:text-violet-300"
+                          >
+                            {mod.title}
+                          </Link>
+                          <p className="mt-1 text-sm text-zinc-500">
+                            {mod.description}
+                          </p>
+                          <p className="mt-1 text-xs tabular-nums text-zinc-600">
+                            {mp.total} lessons · ~{mod.estimatedHours}h
+                          </p>
+                        </div>
                       </div>
                       <span className="text-xs tabular-nums text-zinc-500">
                         {mp.done}/{mp.total}
@@ -75,7 +82,7 @@ export function PathOverview() {
                     </div>
                     <ProgressBar percent={mp.percent} size="sm" className="mt-3" />
                     <ul className="mt-3 space-y-1">
-                      {mod.lessons.map((l) => {
+                      {mod.lessons.map((l, i) => {
                         const done = isLessonComplete(progress, l.id);
                         return (
                           <li key={l.id}>
@@ -102,6 +109,9 @@ export function PathOverview() {
                               ) : (
                                 <span className="h-3.5 w-3.5 rounded-full border border-zinc-600" />
                               )}
+                              <span className="w-8 shrink-0 text-[11px] text-zinc-600">
+                                {i + 1}/{mod.lessons.length}
+                              </span>
                               <span>{l.title}</span>
                               <span className="text-xs text-zinc-600">
                                 {l.estimatedMinutes}m

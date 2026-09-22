@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { ensureAudio, makeHat, makeKick, Tone } from "@/lib/tone-helpers";
+import { GearChassis } from "@/components/gear/GearChassis";
 
 type Bucket = "slow" | "medium" | "fast";
 
@@ -99,7 +100,7 @@ export function EarFeel() {
   };
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+    <GearChassis plate="BeatPath EAR-T · tempo feel">
       <p className="mb-4 text-sm text-zinc-400">
         Hear a short pulse and choose slow / medium / fast.{" "}
         <strong className="text-zinc-200">BPM</strong> = beats per minute —
@@ -166,6 +167,6 @@ export function EarFeel() {
           )}
         </>
       )}
-    </div>
+    </GearChassis>
   );
 }

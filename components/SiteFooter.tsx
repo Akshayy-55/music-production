@@ -9,6 +9,9 @@ export function SiteFooter() {
           device.
         </p>
         <div className="flex gap-4">
+          <Link href="/practice/mixer" className="hover:text-zinc-300">
+            Mixer
+          </Link>
           <Link href="/about" className="hover:text-zinc-300">
             About
           </Link>

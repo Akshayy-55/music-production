@@ -1,4 +1,6 @@
 import { PathOverview } from "@/components/PathOverview";
+import { PathRoadmap } from "@/components/PathRoadmap";
+import { CertificateCard } from "@/components/CertificateCard";
 
 export default function PathPage() {
   return (
@@ -12,7 +14,16 @@ export default function PathPage() {
         </code>{" "}
         to open DJ/Prod modules.
       </p>
+
       <div className="mt-8">
+        <PathRoadmap />
+      </div>
+
+      <div className="mt-8">
+        <CertificateCard />
+      </div>
+
+      <div className="mt-10">
         <PathOverview />
       </div>
     </div>

@@ -1,17 +1,20 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function PracticeShell({
   title,
   description,
   children,
+  wide = false,
 }: {
   title: string;
   description: string;
   children: React.ReactNode;
+  wide?: boolean;
 }) {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8">
+    <div className={cn("mx-auto px-4 py-8", wide ? "max-w-6xl" : "max-w-3xl")}>
       <Link
         href="/practice"
         className="mb-6 inline-flex items-center gap-1.5 text-sm text-zinc-400 hover:text-zinc-200"
