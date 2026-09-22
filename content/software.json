@@ -1,0 +1,119 @@
+{
+  "dj": [
+    {
+      "name": "Mixxx",
+      "price": "Free (FOSS)",
+      "platforms": "Windows, macOS, Linux",
+      "bestFor": "Day-1 learning with zero cost; full features",
+      "notes": "Recommended first. Concepts transfer to paid apps.",
+      "url": "https://mixxx.org/",
+      "tier": "free"
+    },
+    {
+      "name": "Serato DJ Lite",
+      "price": "Free tier",
+      "platforms": "Windows, macOS",
+      "bestFor": "Common club/controller workflows",
+      "notes": "Hardware unlocks more features; Lite is enough to learn decks.",
+      "url": "https://serato.com/dj/lite",
+      "tier": "free"
+    },
+    {
+      "name": "rekordbox",
+      "price": "Free tier + paid",
+      "platforms": "Windows, macOS",
+      "bestFor": "Pioneer ecosystem and USB prep",
+      "notes": "Performance mode limits vary by version/hardware.",
+      "url": "https://rekordbox.com/",
+      "tier": "freemium"
+    },
+    {
+      "name": "VirtualDJ Home",
+      "price": "Free for home use",
+      "platforms": "Windows, macOS",
+      "bestFor": "Quick start on home setups",
+      "notes": "Licensing differs for paid gigs — check their site.",
+      "url": "https://www.virtualdj.com/",
+      "tier": "freemium"
+    }
+  ],
+  "daw": [
+    {
+      "name": "LMMS",
+      "price": "Free (FOSS)",
+      "platforms": "Windows, Linux, macOS (community)",
+      "bestFor": "Pattern-based beat making on a budget",
+      "notes": "Great mental model: patterns → song.",
+      "url": "https://lmms.io/",
+      "tier": "free"
+    },
+    {
+      "name": "Cakewalk by BandLab",
+      "price": "Free",
+      "platforms": "Windows",
+      "bestFor": "Full Windows DAW without buying",
+      "notes": "Account required; solid for first finished tracks.",
+      "url": "https://www.bandlab.com/products/cakewalk",
+      "tier": "free"
+    },
+    {
+      "name": "Tracktion Waveform Free",
+      "price": "Free",
+      "platforms": "Windows, macOS, Linux",
+      "bestFor": "Cross-platform free production",
+      "notes": "Paid upgrades exist; Free is enough to learn.",
+      "url": "https://www.tracktion.com/products/waveform-free",
+      "tier": "free"
+    },
+    {
+      "name": "Audacity",
+      "price": "Free (FOSS)",
+      "platforms": "Windows, macOS, Linux",
+      "bestFor": "Editing, trimming, simple processing — not a full DAW",
+      "notes": "Use for cleanup; arrange in a real DAW.",
+      "url": "https://www.audacityteam.org/",
+      "tier": "free"
+    },
+    {
+      "name": "Reaper",
+      "price": "Eval + affordable license",
+      "platforms": "Windows, macOS, Linux",
+      "bestFor": "Powerful, cheap long-term DAW",
+      "notes": "Fully usable evaluation; buy when ready.",
+      "url": "https://www.reaper.fm/",
+      "tier": "paid-cheap"
+    },
+    {
+      "name": "FL Studio",
+      "price": "Paid (demo available)",
+      "platforms": "Windows, macOS",
+      "bestFor": "Pattern/playlist workflow popular with beat makers",
+      "notes": "Demo can export with limits — check current policy.",
+      "url": "https://www.image-line.com/fl-studio/",
+      "tier": "paid"
+    },
+    {
+      "name": "Ableton Live",
+      "price": "Paid (Intro/Standard/Suite)",
+      "platforms": "Windows, macOS",
+      "bestFor": "Clip view, live performance, electronic production",
+      "notes": "Industry common; Learning Music site is free separately.",
+      "url": "https://www.ableton.com/",
+      "tier": "paid"
+    },
+    {
+      "name": "Logic Pro",
+      "price": "Paid",
+      "platforms": "macOS only",
+      "bestFor": "Mac users wanting a polished all-in-one",
+      "notes": "One-time purchase via App Store region pricing.",
+      "url": "https://www.apple.com/logic-pro/",
+      "tier": "paid"
+    }
+  ],
+  "advice": [
+    "Pick ONE DJ app and ONE DAW for 30 days. Switching weekly kills progress.",
+    "Mixxx + LMMS (or Cakewalk on Windows) is a complete free path.",
+    "Paid tools are optional upgrades after you finish a mix or track."
+  ]
+}

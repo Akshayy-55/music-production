@@ -1,0 +1,2502 @@
+{
+  "version": 1,
+  "product": "BeatPath",
+  "localeDefault": "en-IN",
+  "estimatedTotalHours": "40-60",
+  "tracks": [
+    {
+      "id": "shared",
+      "title": "Shared Fundamentals",
+      "description": "Listening, rhythm, EQ, and structure — required before DJ or Production deep work."
+    },
+    {
+      "id": "dj",
+      "title": "DJ Track",
+      "description": "From installing free DJ software to recording your first 10–15 minute mix.",
+      "requiresModuleExam": "m3.l5"
+    },
+    {
+      "id": "production",
+      "title": "Production Track",
+      "description": "From picking a free DAW to exporting your first finished track.",
+      "requiresModuleExam": "m3.l5"
+    }
+  ],
+  "modules": [
+    {
+      "id": "m0",
+      "title": "Start Here",
+      "track": "shared",
+      "order": 0,
+      "estimatedHours": 2.5,
+      "description": "Orientation, safe listening habits, and a simple 30-day practice contract.",
+      "lessons": [
+        {
+          "id": "m0.l1",
+          "title": "Welcome to BeatPath",
+          "estimatedMinutes": 15,
+          "track": "shared",
+          "summary": "BeatPath is your one hub from absolute beginner to a first DJ mix and a first finished track. You will learn in small steps with practice built in.",
+          "whyItMatters": [
+            "One clear path beats fifty random YouTube tabs.",
+            "Progress is saved on this device — no account needed for v1."
+          ],
+          "exercise": {
+            "title": "Set your intention",
+            "description": "Open Today's Practice, pick a daily time window (e.g. 8:00–8:30 PM IST), and choose to begin with Shared Fundamentals.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "I understand BeatPath covers both DJ and production",
+            "I set (or wrote down) a daily practice time",
+            "I will start with Shared modules before buying gear"
+          ],
+          "resources": [
+            {
+              "title": "Ableton Learning Music — Get started",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            },
+            {
+              "title": "Mixxx — Free DJ software",
+              "url": "https://mixxx.org/",
+              "type": "tool"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [],
+          "successCheckpoint": "Daily time chosen; Shared path selected"
+        },
+        {
+          "id": "m0.l2",
+          "title": "How to listen like a maker",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Passive listening is enjoyment. Active listening is study: you notice when the kick enters, when the bass drops out, and when energy rises or falls.",
+          "whyItMatters": [
+            "DJs use this to plan transitions.",
+            "Producers use this to copy structure without copying melodies."
+          ],
+          "exercise": {
+            "title": "Mark three songs",
+            "description": "Pick 3 tracks you like. For each, note: approx BPM feel (slow/medium/fast), where the first big energy change is, and whether drums stay constant.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Song 1 notes done",
+            "Song 2 notes done",
+            "Song 3 notes done",
+            "I wrote one sentence: what I want my first mix or track to feel like"
+          ],
+          "resources": [
+            {
+              "title": "Learning Music — song structure ideas",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m0.l1"
+          ],
+          "successCheckpoint": "Active-listening notes for 3 songs"
+        },
+        {
+          "id": "m0.l3",
+          "title": "Headphones, volume, and hearing safety",
+          "estimatedMinutes": 15,
+          "track": "shared",
+          "summary": "Loud volume feels exciting and destroys detail (and hearing). Keep sessions reasonable and take breaks.",
+          "whyItMatters": [
+            "You cannot DJ or produce well with damaged ears.",
+            "Lower volume improves mix decisions."
+          ],
+          "exercise": {
+            "title": "Safe session setup",
+            "description": "Set device volume to a comfortable speech-level for podcasts, then music slightly above that — not max. Plan a max 60-minute focused block with a 5-minute quiet break.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Volume is not at maximum",
+            "I know the 60-minute focus + break rule",
+            "I will use headphones that seal enough to hear bass without blasting"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m0.l1"
+          ],
+          "successCheckpoint": "Safety checklist complete"
+        },
+        {
+          "id": "m0.l4",
+          "title": "Free tools you will use (overview)",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "Day 1 needs software, not a ₹40,000 controller. Mixxx is free and open source for DJing. For production, pick one free DAW later in Module M6.",
+          "whyItMatters": [
+            "Skills transfer across apps.",
+            "Buying gear too early delays practice."
+          ],
+          "exercise": {
+            "title": "Bookmark your toolkit",
+            "description": "Bookmark Mixxx download page and skim the DAW comparison page inside BeatPath (/software). Do not install everything today — just know where things live.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Mixxx page bookmarked",
+            "I opened BeatPath Software page",
+            "I will install DJ software in Module M4 and one DAW in Module M6"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx",
+              "url": "https://mixxx.org/",
+              "type": "tool"
+            },
+            {
+              "title": "LMMS",
+              "url": "https://lmms.io/",
+              "type": "tool"
+            },
+            {
+              "title": "openDAW (web DAW, explore later)",
+              "url": "https://opendaw.org/",
+              "type": "tool"
+            },
+            {
+              "title": "Tone.js (powers our in-browser tools)",
+              "url": "https://tonejs.github.io/",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m0.l1"
+          ],
+          "successCheckpoint": "Bookmarks confirmed"
+        },
+        {
+          "id": "m0.l5",
+          "title": "Your 30-day practice contract",
+          "estimatedMinutes": 15,
+          "track": "shared",
+          "summary": "Consistency beats intensity. Thirty days of 20–40 minutes will outrun one heroic weekend.",
+          "whyItMatters": [
+            "A contract makes practice concrete.",
+            "Goals should be observable (record a mix), not vague (get good)."
+          ],
+          "exercise": {
+            "title": "Write three goals",
+            "description": "Write: (1) habit goal — practice N days/week, (2) DJ goal — e.g. beatmatch two tracks, (3) production goal — e.g. 8-bar drum loop. Keep them small.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Habit goal written",
+            "DJ goal written",
+            "Production goal written",
+            "I accept imperfect practice counts"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m0.l2",
+            "m0.l3"
+          ],
+          "successCheckpoint": "Three goals checked"
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "title": "Rhythm & Pulse",
+      "track": "shared",
+      "order": 1,
+      "estimatedHours": 4,
+      "description": "BPM, bars, drum alphabet, and groove — the shared language of DJs and producers.",
+      "lessons": [
+        {
+          "id": "m1.l1",
+          "title": "What is BPM?",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "BPM means beats per minute — how fast the pulse is. House often sits near 120–130; hip-hop often slower; drum & bass much faster.",
+          "whyItMatters": [
+            "Matching BPM is the first half of beatmatching.",
+            "Producers set project BPM so drums grid correctly."
+          ],
+          "exercise": {
+            "title": "Tap tempo on five songs",
+            "description": "Use the BeatPath metronome tap feature (or tap along) on 5 songs. Guess slow/medium/fast, then check any BPM shown in files/apps if available.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Tapped 5 songs",
+            "I can explain BPM in one sentence",
+            "I know my favorite genre's usual BPM range roughly"
+          ],
+          "resources": [
+            {
+              "title": "MusicTheory.net — rhythm lessons",
+              "url": "https://www.musictheory.net/lessons",
+              "type": "lesson"
+            }
+          ],
+          "practiceTools": [
+            "metronome"
+          ],
+          "prerequisites": [
+            "m0.l5"
+          ],
+          "successCheckpoint": "5 taps practiced"
+        },
+        {
+          "id": "m1.l2",
+          "title": "Beats, bars, and counting to 8",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "In most dance music, you count 1-2-3-4 in a bar, and group bars into phrases of 8 or 16. DJs change tracks on phrase boundaries so the floor feels natural.",
+          "whyItMatters": [
+            "Phrasing separates beginner mashups from smooth sets.",
+            "Producers arrange drops on phrase starts."
+          ],
+          "exercise": {
+            "title": "Count eight-bar phrases",
+            "description": "Start metronome at 120 BPM. Count bars: each 4 beats = 1 bar. Clap lightly on bar 1 of every 8 bars. Do this for 2 minutes without losing count.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "I counted at least four clean 8-bar cycles",
+            "I understand 8 bars ≈ 32 beats in 4/4",
+            "I tried counting along to one real song"
+          ],
+          "resources": [],
+          "practiceTools": [
+            "metronome"
+          ],
+          "prerequisites": [
+            "m1.l1"
+          ],
+          "successCheckpoint": "4 clean 8-bar counts"
+        },
+        {
+          "id": "m1.l3",
+          "title": "Kick, snare, hat — the drum alphabet",
+          "estimatedMinutes": 30,
+          "track": "shared",
+          "summary": "Kick (bass drum) is the thump on the pulse. Snare/clap often hits on beats 2 and 4. Hats tick the subdivisions. If you can name them by ear, everything else gets easier.",
+          "whyItMatters": [
+            "Critical for beatmatching and for programming drums.",
+            "Ear training compounds quickly with short daily drills."
+          ],
+          "exercise": {
+            "title": "Drum ID trainer",
+            "description": "Complete 20 rounds in /practice/ear-drums. Aim for 80%+ correctness. Repeat tomorrow if needed.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Completed 20 ear-drum rounds",
+            "Scored at least 80% or scheduled a retry",
+            "I can hum a kick vs snare difference"
+          ],
+          "resources": [
+            {
+              "title": "SoundGym — deeper producer ear training (optional)",
+              "url": "https://www.soundgym.co/",
+              "type": "tool"
+            },
+            {
+              "title": "best-music-theory-resources list",
+              "url": "https://github.com/grades2018/best-music-theory-resources",
+              "type": "list"
+            }
+          ],
+          "practiceTools": [
+            "ear-drums"
+          ],
+          "prerequisites": [
+            "m1.l2"
+          ],
+          "successCheckpoint": "≥80% drum ID accuracy"
+        },
+        {
+          "id": "m1.l4",
+          "title": "Groove vs metronome",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "A metronome is perfect pulse. Groove is how drums sit around that pulse — especially the snare/clap on 2 and 4 (backbeat) and hat swing.",
+          "whyItMatters": [
+            "Dancing bodies lock to backbeat.",
+            "Lifeless grids can be tightened later; feel comes first."
+          ],
+          "exercise": {
+            "title": "Clap the backbeat",
+            "description": "Metronome on. Clap only on beats 2 and 4 for 60 seconds. Then add quiet foot taps on 1 and 3.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Clapped 2 and 4 steadily for 60 seconds",
+            "Felt the difference between all-four stomps and backbeat"
+          ],
+          "resources": [
+            {
+              "title": "Ableton Learning Music — Make beats",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [
+            "metronome",
+            "beat-pad"
+          ],
+          "prerequisites": [
+            "m1.l3"
+          ],
+          "successCheckpoint": "Backbeat felt"
+        },
+        {
+          "id": "m1.l5",
+          "title": "Genre tempo map",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Rough map: Hip-hop ~80–100, Bollywood/pop dance often ~100–130, House/techno ~120–135, Drum & bass ~160–175. Maps are guides, not laws.",
+          "whyItMatters": [
+            "Crate building and playlist energy depend on tempo neighborhoods.",
+            "Helps you avoid impossible mixes on Day 1."
+          ],
+          "exercise": {
+            "title": "Sort eight tracks",
+            "description": "Take 8 songs from your phone. Sort into Slow / Mid / Fast piles. Note one track you would never mix into another (tempo clash).",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "8 tracks sorted",
+            "One impossible pair identified",
+            "I know which pile I want for my first DJ crate"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m1.l1"
+          ],
+          "successCheckpoint": "Tempo sorting done"
+        },
+        {
+          "id": "m1.l6",
+          "title": "Drill week: daily 10-min pulse",
+          "estimatedMinutes": 10,
+          "track": "shared",
+          "summary": "Short daily reps beat long rare sessions. This lesson is a repeating drill template.",
+          "whyItMatters": [
+            "Builds automatic counting.",
+            "Feeds both DJ and production."
+          ],
+          "exercise": {
+            "title": "10-minute pulse drill",
+            "description": "5 min metronome counting bars; 5 min ear-drums or beat-pad. Log five days (need not be consecutive).",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Day 1 done",
+            "Day 2 done",
+            "Day 3 done",
+            "Day 4 done",
+            "Day 5 done"
+          ],
+          "resources": [],
+          "practiceTools": [
+            "metronome",
+            "ear-drums",
+            "beat-pad"
+          ],
+          "prerequisites": [
+            "m1.l4"
+          ],
+          "successCheckpoint": "5 days logged"
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Sound, Frequency & EQ",
+      "track": "shared",
+      "order": 2,
+      "estimatedHours": 3.5,
+      "description": "Hear bass/mids/highs, understand clashing low end, and use EQ as a clarity tool.",
+      "lessons": [
+        {
+          "id": "m2.l1",
+          "title": "Bass, mids, and highs in plain English",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "Bass is the weight (kick, sub bass). Mids carry vocals and most instruments. Highs are sparkle (hats, air). EQ turns these bands up or down.",
+          "whyItMatters": [
+            "DJs carve bass so two tracks do not fight.",
+            "Producers carve space so every part is audible."
+          ],
+          "exercise": {
+            "title": "EQ demo — solo bands",
+            "description": "Open /practice/eq-demo. Solo low, then mid, then high. Say out loud what instruments live in each band.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "I soloed each band",
+            "I can point to where the kick lives",
+            "I can point to where hats live"
+          ],
+          "resources": [
+            {
+              "title": "EarQuiz Frequencies (optional deeper EQ ears)",
+              "url": "https://earquiz.org/EQ_Frequencies/",
+              "type": "tool"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo"
+          ],
+          "prerequisites": [
+            "m1.l3"
+          ],
+          "successCheckpoint": "Bands identified on demo"
+        },
+        {
+          "id": "m2.l2",
+          "title": "Why two basslines clash",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Low frequencies need space. Two full basslines together turn to mud. Classic DJ move: reduce bass on the incoming track until the swap, then restore.",
+          "whyItMatters": [
+            "Clean transitions feel professional instantly.",
+            "Same idea in production: kick and bass share a plan."
+          ],
+          "exercise": {
+            "title": "Bass kill practice",
+            "description": "In /practice/crossfader (or EQ demo with two loops if crossfader not ready: simulate by cutting low on one source), practice bringing track B in with bass down, then swap bass to B.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Practiced one bass-down intro",
+            "Practiced one bass swap",
+            "I understand mud = competing lows"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx wiki — How To Match Beats (structure notes)",
+              "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo",
+            "crossfader"
+          ],
+          "prerequisites": [
+            "m2.l1"
+          ],
+          "successCheckpoint": "Clean bass swap felt"
+        },
+        {
+          "id": "m2.l3",
+          "title": "EQ for clarity, not more",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Beginners boost everything. Pros often cut a little mud (roughly 200–400 Hz) and gently shape. Small moves.",
+          "whyItMatters": [
+            "Boosting all bands is just volume.",
+            "Cuts create space without harshness."
+          ],
+          "exercise": {
+            "title": "Prefer a cut",
+            "description": "On the EQ demo, boost mids hard (notice harshness), reset, then try a gentle low-mid cut. Prefer the clearer version.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Tried extreme boost (and reset)",
+            "Tried a gentle cut",
+            "I will default to small EQ moves"
+          ],
+          "resources": [
+            {
+              "title": "SoundGym School (optional)",
+              "url": "https://www.soundgym.co/site/school?lg=en",
+              "type": "course"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo"
+          ],
+          "prerequisites": [
+            "m2.l1"
+          ],
+          "successCheckpoint": "Cut preferred over boost"
+        },
+        {
+          "id": "m2.l4",
+          "title": "Loudness vs quality",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "Phone speakers hide bass and exaggerate mids. Club systems reveal low-end chaos. Always check on more than one device later.",
+          "whyItMatters": [
+            "Prevents false confidence in mixes.",
+            "Protects you from over-boosting bass on headphones."
+          ],
+          "exercise": {
+            "title": "Two-device listen",
+            "description": "Play the same commercial track on laptop/headphones and on phone speaker. Note three differences.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Listened on two devices",
+            "Wrote 3 differences",
+            "I know phone bass is unreliable"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m2.l1"
+          ],
+          "successCheckpoint": "Two-device notes done"
+        },
+        {
+          "id": "m2.l5",
+          "title": "Ear drill: where is the hat?",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "Train yourself to locate hats and air in the high band quickly — useful when EQing live or mixing.",
+          "whyItMatters": [
+            "Faster corrective EQ under pressure.",
+            "Builds spectrum awareness."
+          ],
+          "exercise": {
+            "title": "Band hunt",
+            "description": "EQ demo: randomly cut one band, guess which. Ten rounds. Optionally visit EarQuiz later.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "10 band-hunt rounds done",
+            "Accuracy feeling ≥75% or retry scheduled"
+          ],
+          "resources": [
+            {
+              "title": "EarQuiz Frequencies",
+              "url": "https://earquiz.org/EQ_Frequencies/",
+              "type": "tool"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo"
+          ],
+          "prerequisites": [
+            "m2.l3"
+          ],
+          "successCheckpoint": "≥75% band awareness"
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Structure, Phrasing & Energy",
+      "track": "shared",
+      "order": 3,
+      "estimatedHours": 3.5,
+      "description": "Hear phrases and energy curves — the bridge between DJing and arranging.",
+      "lessons": [
+        {
+          "id": "m3.l1",
+          "title": "Phrases: 8 / 16 / 32 bars",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Dance music is built from phrases. Mix in on phrase starts; arrange drops on phrase starts.",
+          "whyItMatters": [
+            "Smooth DJ transitions.",
+            "Predictable song building."
+          ],
+          "exercise": {
+            "title": "Phrase map two tracks",
+            "description": "In two dance tracks, mark (timestamp or tally) where you feel a new phrase. Confirm they often land every 8 or 16 bars.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Track A phrase marks done",
+            "Track B phrase marks done",
+            "I can explain phrase in one sentence"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx How To Match Beats",
+              "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [
+            "metronome"
+          ],
+          "prerequisites": [
+            "m1.l2"
+          ],
+          "successCheckpoint": "Phrase maps complete"
+        },
+        {
+          "id": "m3.l2",
+          "title": "Intro, break, drop, outro",
+          "estimatedMinutes": 25,
+          "track": "shared",
+          "summary": "Many electronic tracks: intro (mix-friendly), groove, break/build, drop, outro. Names vary; energy shape matters more than labels.",
+          "whyItMatters": [
+            "DJs use intros/outros as mixing runways.",
+            "Producers copy shapes before inventing new ones."
+          ],
+          "exercise": {
+            "title": "Label one reference",
+            "description": "Pick one track. Label sections: intro / main / break / drop / outro (skip what does not apply).",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Reference chosen",
+            "Sections labeled",
+            "I noted the longest mix-friendly stretch"
+          ],
+          "resources": [
+            {
+              "title": "Ableton Learning Music",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m3.l1"
+          ],
+          "successCheckpoint": "Section labels complete"
+        },
+        {
+          "id": "m3.l3",
+          "title": "Energy curves for DJs and producers",
+          "estimatedMinutes": 20,
+          "track": "shared",
+          "summary": "A set or song is an energy journey. Flat energy bores; random spikes confuse. Sketch curves on purpose.",
+          "whyItMatters": [
+            "Guides track order.",
+            "Guides arrangement intensity."
+          ],
+          "exercise": {
+            "title": "Draw one curve",
+            "description": "On paper or notes, draw energy (low→high) across your reference track's sections.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Energy curve sketched",
+            "I marked the peak moment"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m3.l2"
+          ],
+          "successCheckpoint": "Curve done"
+        },
+        {
+          "id": "m3.l4",
+          "title": "Arrangement is storytelling",
+          "estimatedMinutes": 30,
+          "track": "shared",
+          "summary": "A loop is a sentence. Arrangement is the story: bring elements in/out over 32 bars.",
+          "whyItMatters": [
+            "Turns beatmaking into songs.",
+            "Trains patience beyond 8-bar loops."
+          ],
+          "exercise": {
+            "title": "32-bar story on beat pad",
+            "description": "Make an 8-bar drum loop, then vary it across 32 bars (hats in/out, snare variation). Use /practice/beat-pad or Learning Music.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "8-bar loop made",
+            "Varied across ~32 bars",
+            "I noticed when it got boring and changed something"
+          ],
+          "resources": [
+            {
+              "title": "Ableton Learning Music",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            },
+            {
+              "title": "Tone.js Sequence docs (for the curious)",
+              "url": "https://tonejs.github.io/docs/14.9.17/classes/Sequence.html",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [
+            "beat-pad"
+          ],
+          "prerequisites": [
+            "m3.l3",
+            "m1.l4"
+          ],
+          "successCheckpoint": "32-bar variation done"
+        },
+        {
+          "id": "m3.l5",
+          "title": "Shared fundamentals exam",
+          "estimatedMinutes": 30,
+          "track": "shared",
+          "summary": "Quick check before DJ and Production tracks unlock fully. This is a confidence gate, not a punishment.",
+          "whyItMatters": [
+            "Ensures shared vocabulary.",
+            "Prevents skipping rhythm/EQ basics."
+          ],
+          "exercise": {
+            "title": "Mixed quiz + listening",
+            "description": "Self-check: (1) define BPM, bar, phrase; (2) ID kick/snare/hat in ear trainer ≥80%; (3) explain bass clash; (4) mark a phrase in one song. Retake any weak lesson.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "Definitions written from memory",
+            "Ear-drums ≥80%",
+            "Bass clash explained",
+            "Phrase marked on one song",
+            "I feel ready for DJ and/or Production modules"
+          ],
+          "resources": [
+            {
+              "title": "LightNote — visual theory (optional)",
+              "url": "https://www.lightnote.co/",
+              "type": "interactive"
+            },
+            {
+              "title": "MusicTheory.net",
+              "url": "https://www.musictheory.net/",
+              "type": "lesson"
+            }
+          ],
+          "practiceTools": [
+            "ear-drums",
+            "metronome",
+            "eq-demo"
+          ],
+          "prerequisites": [
+            "m3.l4",
+            "m2.l5",
+            "m1.l6"
+          ],
+          "successCheckpoint": "Score mindset ≥70% self-assessed; unlock DJ/Prod"
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "DJ Software & Library",
+      "track": "dj",
+      "order": 4,
+      "estimatedHours": 4,
+      "description": "Install free DJ software, learn deck layout, and build a tiny starter crate.",
+      "lessons": [
+        {
+          "id": "m4.l1",
+          "title": "DJ software overview",
+          "estimatedMinutes": 25,
+          "track": "dj",
+          "summary": "Mixxx is free/open source and enough to learn everything. Serato DJ Lite, rekordbox, and VirtualDJ Home are free tiers of commercial apps. Concepts transfer.",
+          "whyItMatters": [
+            "Pick one and stick with it for 30 days.",
+            "Hardware can wait."
+          ],
+          "exercise": {
+            "title": "Choose and install",
+            "description": "Install Mixxx (recommended) or one free commercial lite version. Open it once successfully.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "I compared options on /software",
+            "I installed one DJ app",
+            "The app opens without errors"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx",
+              "url": "https://mixxx.org/",
+              "type": "tool"
+            },
+            {
+              "title": "Mixxx GitHub",
+              "url": "https://github.com/mixxxdj/mixxx",
+              "type": "docs"
+            },
+            {
+              "title": "Mixxx Manual",
+              "url": "https://mixxx.org/manual/latest/",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m3.l5"
+          ],
+          "successCheckpoint": "DJ app opens"
+        },
+        {
+          "id": "m4.l2",
+          "title": "First look: decks, cue, play",
+          "estimatedMinutes": 30,
+          "track": "dj",
+          "summary": "Two decks (or more). Load a track, set a cue point at the start of the usable intro, practice play/pause.",
+          "whyItMatters": [
+            "Cue points are your bookmarks under pressure.",
+            "Layout familiarity is half of DJing."
+          ],
+          "exercise": {
+            "title": "Load two tracks",
+            "description": "Load Track A and B. Set a cue near the start of each. Play A on master; browse B.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Two tracks loaded",
+            "Cue set on each",
+            "I found headphone cue controls"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx Manual — getting started",
+              "url": "https://mixxx.org/manual/latest/",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l1"
+          ],
+          "successCheckpoint": "Cues set"
+        },
+        {
+          "id": "m4.l3",
+          "title": "Building a starter crate",
+          "estimatedMinutes": 40,
+          "track": "dj",
+          "summary": "Ten to twenty tracks in one energy neighborhood beat a chaotic 2000-song library.",
+          "whyItMatters": [
+            "Good crates make phrasing easier.",
+            "Same genre ≈ similar drum patterns."
+          ],
+          "exercise": {
+            "title": "Crate of 10+",
+            "description": "Create a playlist/crate with ≥10 tracks you would actually play. Prefer mid-tempo dance/EDM/house/Bollywood-EDM you know. Note BPM if the software shows it.",
+            "durationMinutes": 30
+          },
+          "checklist": [
+            "≥10 tracks in one crate",
+            "Mostly one genre/energy",
+            "I removed anything with huge tempo outliers"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l2",
+            "m1.l5"
+          ],
+          "successCheckpoint": "Crate ≥10"
+        },
+        {
+          "id": "m4.l4",
+          "title": "Headphones vs master / cue mix",
+          "estimatedMinutes": 25,
+          "track": "dj",
+          "summary": "Master is what the room hears. Headphones preview the next track. Cue mix blends them for your ears.",
+          "whyItMatters": [
+            "Audience should not hear your scrubbing.",
+            "This is non-negotiable DJ technique."
+          ],
+          "exercise": {
+            "title": "Practice cue mix",
+            "description": "Play A on master. Cue B in headphones only. Flip cue mix and confirm B is not on master.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "B previewed in headphones",
+            "Master stayed on A",
+            "I can find cue gain/mix quickly"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l2"
+          ],
+          "successCheckpoint": "Cue mix understood"
+        },
+        {
+          "id": "m4.l5",
+          "title": "Hot cues and loops",
+          "estimatedMinutes": 30,
+          "track": "dj",
+          "summary": "Hot cues jump to moments (drop, vocal). Loops hold a section to extend intros/outros while you prepare.",
+          "whyItMatters": [
+            "Saves messy mixes.",
+            "Creative tool later; utility tool now."
+          ],
+          "exercise": {
+            "title": "Two cues + one loop",
+            "description": "On one track: cue at intro, cue at drop. Make an 8-bar loop on a clean drum section and exit the loop cleanly.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Intro cue set",
+            "Drop cue set",
+            "8-bar loop in and out cleanly"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l4"
+          ],
+          "successCheckpoint": "2 cues + 1 loop"
+        },
+        {
+          "id": "m4.l6",
+          "title": "Sync button: friend and trap",
+          "estimatedMinutes": 20,
+          "track": "dj",
+          "summary": "Sync matches tempo (and sometimes beats) automatically. Use it to learn phrasing and EQ — but also practice without it so you are not helpless when Sync fails.",
+          "whyItMatters": [
+            "Honest beginners use Sync sometimes.",
+            "Pros still understand manual beatmatching."
+          ],
+          "exercise": {
+            "title": "One with, one without",
+            "description": "Do a short transition using Sync. Then attempt tempo match manually (even if messy). Write one sentence on what Sync hid from you.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Transition with Sync tried",
+            "Manual tempo attempt tried",
+            "Reflection sentence written"
+          ],
+          "resources": [
+            {
+              "title": "How To Match Beats (Mixxx wiki)",
+              "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l5"
+          ],
+          "successCheckpoint": "Sync reflection done"
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Beatmatching & Transitions",
+      "track": "dj",
+      "order": 5,
+      "estimatedHours": 6,
+      "description": "Tempo match, nudge, ride pitch, phrase blends, and EQ bass swaps.",
+      "lessons": [
+        {
+          "id": "m5.l1",
+          "title": "Beatmatching: tempo first",
+          "estimatedMinutes": 35,
+          "track": "dj",
+          "summary": "Before beats align, tempos must match. Use the pitch/tempo fader until BPMs agree (by ear or display, then trust ear).",
+          "whyItMatters": [
+            "Foundation of manual mixing.",
+            "Prevents endless nudging."
+          ],
+          "exercise": {
+            "title": "Match B to A",
+            "description": "Play A. Adjust B's tempo until it feels the same speed for 30 seconds.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Tempos matched by ear or display+ear",
+            "I know where the pitch fader is without looking"
+          ],
+          "resources": [
+            {
+              "title": "How To Match Beats",
+              "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m4.l6"
+          ],
+          "successCheckpoint": "Tempos aligned"
+        },
+        {
+          "id": "m5.l2",
+          "title": "Nudging into alignment",
+          "estimatedMinutes": 40,
+          "track": "dj",
+          "summary": "Once tempos match, nudge (jog / bend) so downbeats land together. Classic drill: same track on both decks.",
+          "whyItMatters": [
+            "Removes variables while learning mechanics.",
+            "Builds hand memory."
+          ],
+          "exercise": {
+            "title": "Same-track lock",
+            "description": "Load the same track on A and B. Match tempo, align beats, keep locked for 16 bars.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "Same track on both decks",
+            "Locked 16 bars",
+            "I practiced nudge both directions"
+          ],
+          "resources": [
+            {
+              "title": "How To Match Beats",
+              "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l1"
+          ],
+          "successCheckpoint": "16 bars locked"
+        },
+        {
+          "id": "m5.l3",
+          "title": "Riding the pitch",
+          "estimatedMinutes": 30,
+          "track": "dj",
+          "summary": "Tracks drift. Tiny pitch rides keep alignment. Look less; listen more.",
+          "whyItMatters": [
+            "Real vinyl/CDJ life skill.",
+            "Even digital decks benefit."
+          ],
+          "exercise": {
+            "title": "Stay locked 32 bars",
+            "description": "Different tracks, similar BPM. Keep kick alignment for 32 bars using small corrections.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "32 bars without major trainwreck",
+            "Corrections were small, not panic scratches"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l2"
+          ],
+          "successCheckpoint": "32 bars ridden"
+        },
+        {
+          "id": "m5.l4",
+          "title": "Phrased transitions",
+          "estimatedMinutes": 40,
+          "track": "dj",
+          "summary": "Start the incoming track so its phrase lines up with the outgoing phrase. Dowbeats and musical sentences agree.",
+          "whyItMatters": [
+            "This is what makes mixes feel intentional.",
+            "Uses everything from Module M3."
+          ],
+          "exercise": {
+            "title": "Three phrased blends",
+            "description": "Perform 3 transitions that begin on phrase boundaries. Record mentally which ones felt smooth.",
+            "durationMinutes": 30
+          },
+          "checklist": [
+            "Transition 1 phrased",
+            "Transition 2 phrased",
+            "Transition 3 phrased"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l3",
+            "m3.l1"
+          ],
+          "successCheckpoint": "3 phrased mixes"
+        },
+        {
+          "id": "m5.l5",
+          "title": "EQ bass swap transition",
+          "estimatedMinutes": 35,
+          "track": "dj",
+          "summary": "During the blend, keep only one full bassline. Swap bass as you hand over the groove.",
+          "whyItMatters": [
+            "Instant clarity upgrade.",
+            "Protects the PA and the dancefloor."
+          ],
+          "exercise": {
+            "title": "Clean bass swap",
+            "description": "In a phrased blend, cut bass on B until swap point, then cut bass on A as you restore B. Repeat 3 times.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "3 bass swaps practiced",
+            "I avoided long double-bass moments"
+          ],
+          "resources": [
+            {
+              "title": "BeatPath EQ demo (concept refresh)",
+              "url": "/practice/eq-demo",
+              "type": "tool"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo",
+            "crossfader"
+          ],
+          "prerequisites": [
+            "m5.l4",
+            "m2.l2"
+          ],
+          "successCheckpoint": "Clean swaps"
+        },
+        {
+          "id": "m5.l6",
+          "title": "Filters and FX tastefully",
+          "estimatedMinutes": 25,
+          "track": "dj",
+          "summary": "Filters and effects are seasoning. One intentional sweep beats five gimmicks.",
+          "whyItMatters": [
+            "Taste builds trust with listeners.",
+            "FX cannot hide bad beatmatching."
+          ],
+          "exercise": {
+            "title": "One sweep rule",
+            "description": "Do a full transition using at most one filter sweep and no other FX. Listen back if you can record.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Transition with ≤1 filter sweep",
+            "I resisted stacking FX"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l5"
+          ],
+          "successCheckpoint": "Restraint checklist"
+        },
+        {
+          "id": "m5.l7",
+          "title": "Drill: 15-min transition gym",
+          "estimatedMinutes": 15,
+          "track": "dj",
+          "summary": "Repeated short sessions beat occasional long ones.",
+          "whyItMatters": [
+            "Mechanics become automatic.",
+            "Prepares you for the capstone mix."
+          ],
+          "exercise": {
+            "title": "Transition gym ×5",
+            "description": "Fifteen minutes: only two-track transitions (tempo, phrase, bass swap). Complete five sessions.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Session 1",
+            "Session 2",
+            "Session 3",
+            "Session 4",
+            "Session 5"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l6"
+          ],
+          "successCheckpoint": "5 sessions logged"
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Production: DAW Basics",
+      "track": "production",
+      "order": 6,
+      "estimatedHours": 4.5,
+      "description": "Pick one DAW, learn timeline/MIDI/mixer, and export a test file.",
+      "lessons": [
+        {
+          "id": "m6.l1",
+          "title": "DAW comparison (free and popular)",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "Free starters: LMMS (cross-platform), Cakewalk (Windows), Waveform Free, Audacity (editing), Reaper (eval, cheap license). Popular paid: FL Studio, Ableton Live, Logic (Mac). Pick ONE for 30 days.",
+          "whyItMatters": [
+            "Tool hopping kills progress.",
+            "Concepts transfer after one workflow clicks."
+          ],
+          "exercise": {
+            "title": "Pick one",
+            "description": "Read /software and choose one DAW. Write why in one line (OS + budget + genre interest).",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Read Software page",
+            "Chose one DAW",
+            "Wrote one-line reason"
+          ],
+          "resources": [
+            {
+              "title": "LMMS",
+              "url": "https://lmms.io/",
+              "type": "tool"
+            },
+            {
+              "title": "openDAW",
+              "url": "https://opendaw.org/",
+              "type": "tool"
+            },
+            {
+              "title": "Homestudio Grooves — free DAWs overview",
+              "url": "https://homestudiogrooves.com/free-daws-for-beginners/",
+              "type": "article"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m3.l5"
+          ],
+          "successCheckpoint": "DAW chosen"
+        },
+        {
+          "id": "m6.l2",
+          "title": "Install and first project",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Install, create empty project, set BPM to something you like (e.g. 120), save a template.",
+          "whyItMatters": [
+            "Templates remove blank-page fear.",
+            "Saving early prevents lost work."
+          ],
+          "exercise": {
+            "title": "Template save",
+            "description": "Create project, set BPM, add 2–4 empty tracks labeled Drums/Bass/Music/FX, save as Template-BeatPath.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "DAW installed",
+            "BPM set",
+            "Template saved"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m6.l1"
+          ],
+          "successCheckpoint": "Template saved"
+        },
+        {
+          "id": "m6.l3",
+          "title": "Timeline, tracks, clips/patterns",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Music is laid on a timeline. Clips/patterns are blocks you repeat and arrange.",
+          "whyItMatters": [
+            "Arrangement skill starts with navigation.",
+            "Zoom and markers save time."
+          ],
+          "exercise": {
+            "title": "Four bar markers",
+            "description": "Place markers or empty clips at bars 1, 9, 17, 25. Scroll and zoom comfortably.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Can zoom timeline",
+            "Markers/clips at phrase starts",
+            "I know how to loop a region for editing"
+          ],
+          "resources": [
+            {
+              "title": "Ableton Learning Music (browser arrangement intuition)",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m6.l2"
+          ],
+          "successCheckpoint": "Navigate timeline"
+        },
+        {
+          "id": "m6.l4",
+          "title": "MIDI vs audio",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "MIDI is notes/data that drive instruments. Audio is recorded sound. Drums and synths often start as MIDI; vocals/samples as audio.",
+          "whyItMatters": [
+            "Editing notes is easier than re-recording sometimes.",
+            "You will use both constantly."
+          ],
+          "exercise": {
+            "title": "Draw middle C",
+            "description": "Add a software instrument, draw a MIDI note (middle C), make it play on loop.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Instrument added",
+            "MIDI note plays",
+            "I can lengthen/shorten the note"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m6.l3"
+          ],
+          "successCheckpoint": "MIDI note plays"
+        },
+        {
+          "id": "m6.l5",
+          "title": "Mixer: faders, pan, mute/solo",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "Mixing starts with volume balance and pan. Mute/solo helps you focus.",
+          "whyItMatters": [
+            "Good levels solve half of 'my track sounds bad'.",
+            "Pan creates width without plugins."
+          ],
+          "exercise": {
+            "title": "Balance three parts",
+            "description": "Put kick, hat, and a tone on three tracks. Balance so kick is clearest, hat supports, tone not screaming.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Used faders",
+            "Tried pan left/right lightly",
+            "Used solo to check kick"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m6.l4"
+          ],
+          "successCheckpoint": "Rough balance done"
+        },
+        {
+          "id": "m6.l6",
+          "title": "Export settings (WAV/MP3)",
+          "estimatedMinutes": 20,
+          "track": "production",
+          "summary": "Export/render bounces your project to a file. WAV is higher quality for archiving; MP3 is smaller for sharing.",
+          "whyItMatters": [
+            "You cannot improve what you never export.",
+            "Phone listening catches problems."
+          ],
+          "exercise": {
+            "title": "10-second export",
+            "description": "Export at least 10 seconds to WAV or MP3 and play it outside the DAW (phone/files app).",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Exported a file",
+            "Played outside DAW",
+            "I know where exports are saved"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m6.l5"
+          ],
+          "successCheckpoint": "Test export plays on phone"
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Beat Making, Bass & Melody",
+      "track": "production",
+      "order": 7,
+      "estimatedHours": 6,
+      "description": "Program drums, add bass and a simple hook, arrange to 32 bars with legal samples.",
+      "lessons": [
+        {
+          "id": "m7.l1",
+          "title": "Program a 4-on-the-floor kick",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Four-on-the-floor: kick on every beat. House/EDM foundation. Also practice in BeatPath beat pad.",
+          "whyItMatters": [
+            "Core dance groove.",
+            "Teaches grid programming."
+          ],
+          "exercise": {
+            "title": "Kick every beat",
+            "description": "In DAW or /practice/beat-pad, place kicks on all four beats; loop 8 bars cleanly.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Kick pattern looping",
+            "BPM set intentionally",
+            "No random extra kicks yet"
+          ],
+          "resources": [
+            {
+              "title": "Learning Music — beats",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [
+            "beat-pad"
+          ],
+          "prerequisites": [
+            "m6.l6"
+          ],
+          "successCheckpoint": "Clean kick loop"
+        },
+        {
+          "id": "m7.l2",
+          "title": "Snare/clap + hats",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Add snare/clap on 2 and 4; hats on 8th notes (or offbeats).",
+          "whyItMatters": [
+            "Completes the drum alphabet in practice.",
+            "Instant recognizable groove."
+          ],
+          "exercise": {
+            "title": "Full basic kit",
+            "description": "Add backbeat + hats to your kick loop. Listen for clutter; simplify if needed.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Backbeat added",
+            "Hats added",
+            "Loop feels danceable to you"
+          ],
+          "resources": [],
+          "practiceTools": [
+            "beat-pad"
+          ],
+          "prerequisites": [
+            "m7.l1"
+          ],
+          "successCheckpoint": "Groove checklist"
+        },
+        {
+          "id": "m7.l3",
+          "title": "Ghost notes and swing (light)",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "Swing delays some hats/notes for human feel. Ghost notes are quiet extra hits. Use lightly.",
+          "whyItMatters": [
+            "Separates robotic from groovy.",
+            "Small swing goes far."
+          ],
+          "exercise": {
+            "title": "Add light swing",
+            "description": "Enable swing ~55–60% or nudge hats slightly. A/B with straight timing.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Tried swing or nudge",
+            "Kept the one that feels better",
+            "Did not overdo ghost notes"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l2"
+          ],
+          "successCheckpoint": "Feel improvement noted"
+        },
+        {
+          "id": "m7.l4",
+          "title": "Bass that follows the kick",
+          "estimatedMinutes": 35,
+          "track": "production",
+          "summary": "Write a simple bass on root notes. Side-plan with kick: leave space or duck later. For now, avoid long bass notes on every kick collision if muddy.",
+          "whyItMatters": [
+            "Low-end clarity is pro territory even for beginners.",
+            "Bass defines genre energy."
+          ],
+          "exercise": {
+            "title": "Root-note bass",
+            "description": "Add a bass instrument; play roots that fit your drums in one key. Check with EQ ears: if muddy, shorten bass notes.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "Bass line present",
+            "Kick still audible",
+            "Stayed in one key"
+          ],
+          "resources": [
+            {
+              "title": "LightNote",
+              "url": "https://www.lightnote.co/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l2",
+            "m2.l2"
+          ],
+          "successCheckpoint": "Kick+bass clear"
+        },
+        {
+          "id": "m7.l5",
+          "title": "One-scale melody (minor pentatonic)",
+          "estimatedMinutes": 40,
+          "track": "production",
+          "summary": "Minor pentatonic is beginner-friendly. Limit yourself to 5 notes; write an 8-bar hook you can hum.",
+          "whyItMatters": [
+            "Constraints speed creativity.",
+            "Hooks > complex runs for first tracks."
+          ],
+          "exercise": {
+            "title": "Humable hook",
+            "description": "Write 8 bars using a pentatonic scale (DAW scale mode or Learning Music). Hum it without looking.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "8-bar melody written",
+            "I can hum it",
+            "Left space (not notes every 16th)"
+          ],
+          "resources": [
+            {
+              "title": "Learning Music",
+              "url": "https://learningmusic.ableton.com/",
+              "type": "interactive"
+            },
+            {
+              "title": "MusicTheory.net",
+              "url": "https://www.musictheory.net/",
+              "type": "lesson"
+            },
+            {
+              "title": "Learning Synths (optional sound design)",
+              "url": "https://learningsynths.ableton.com/",
+              "type": "interactive"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l4"
+          ],
+          "successCheckpoint": "Hook memorable"
+        },
+        {
+          "id": "m7.l6",
+          "title": "Sampling ethics and free packs",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "Only use samples you have rights to: bundled DAW content, clearly free/CC0 packs, or your recordings. Do not rip copyrighted songs for 'my beat' uploads.",
+          "whyItMatters": [
+            "Keeps releases safe.",
+            "Builds honest habits."
+          ],
+          "exercise": {
+            "title": "Get one legal pack",
+            "description": "Download one free sample pack from a reputable free source or use stock sounds in your DAW. Install/tag it.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Legal pack or stock library ready",
+            "I understand not to pirate packs/courses",
+            "I labeled a favorite kick and snare"
+          ],
+          "resources": [
+            {
+              "title": "study-music resource wiki (theory/sound lists)",
+              "url": "https://github.com/vpavlenko/study-music",
+              "type": "list"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l1"
+          ],
+          "successCheckpoint": "Legal pack installed"
+        },
+        {
+          "id": "m7.l7",
+          "title": "From loop to 32 bars",
+          "estimatedMinutes": 40,
+          "track": "production",
+          "summary": "Duplicate your loop and change something every 8 bars: hats filter, bass rest, melody entry.",
+          "whyItMatters": [
+            "Breaks loop fatigue.",
+            "Prepares arrangement capstone."
+          ],
+          "exercise": {
+            "title": "32-bar sketch",
+            "description": "Arrange intro drums → full groove → melody entry across 32 bars. Export a rough bounce.",
+            "durationMinutes": 30
+          },
+          "checklist": [
+            "32 bars in timeline",
+            "At least 3 section changes",
+            "Rough export done"
+          ],
+          "resources": [
+            {
+              "title": "freeCodeCamp FL Studio course (optional parallel video)",
+              "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/",
+              "type": "course"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l5",
+            "m7.l6"
+          ],
+          "successCheckpoint": "32-bar sketch exported"
+        }
+      ]
+    },
+    {
+      "id": "m8",
+      "title": "DJ Capstone: First Mix",
+      "track": "dj",
+      "order": 8,
+      "estimatedHours": 5,
+      "description": "Plan, practice, record, critique, and re-record a 10–15 minute continuous mix.",
+      "lessons": [
+        {
+          "id": "m8.l1",
+          "title": "Planning a 10–15 min set",
+          "estimatedMinutes": 30,
+          "track": "dj",
+          "summary": "Write track order and intended transition type (phrase + bass swap). Keep 4–6 tracks.",
+          "whyItMatters": [
+            "Planning reduces panic.",
+            "Short sets are complete stories."
+          ],
+          "exercise": {
+            "title": "Set card",
+            "description": "On paper: track list, BPM notes, where you will mix (intro→outro).",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "4–6 tracks chosen",
+            "Order written",
+            "Transition notes written"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m5.l7"
+          ],
+          "successCheckpoint": "Set card done"
+        },
+        {
+          "id": "m8.l2",
+          "title": "Practice run (no record)",
+          "estimatedMinutes": 45,
+          "track": "dj",
+          "summary": "Full run without recording pressure. Note weak spots only.",
+          "whyItMatters": [
+            "Separates learning from performing.",
+            "Finds real failure points."
+          ],
+          "exercise": {
+            "title": "Full unrecorded run",
+            "description": "Play the planned set start to finish. Pause only if catastrophic. Write 3 weak spots after.",
+            "durationMinutes": 40
+          },
+          "checklist": [
+            "Completed a full run",
+            "3 weak spots noted",
+            "Adjusted set card if needed"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m8.l1"
+          ],
+          "successCheckpoint": "Practice run done"
+        },
+        {
+          "id": "m8.l3",
+          "title": "Record your mix",
+          "estimatedMinutes": 45,
+          "track": "dj",
+          "summary": "Record a continuous mix in your DJ software (or system audio). Keep going through mistakes.",
+          "whyItMatters": [
+            "Finished > perfect.",
+            "You need audio to critique."
+          ],
+          "exercise": {
+            "title": "Record take 1",
+            "description": "Record 10–15 minutes. Save the file with date in the name.",
+            "durationMinutes": 40
+          },
+          "checklist": [
+            "Recording enabled before start",
+            "File saved",
+            "Duration ≥10 minutes"
+          ],
+          "resources": [
+            {
+              "title": "Mixxx Manual — recording",
+              "url": "https://mixxx.org/manual/latest/",
+              "type": "docs"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m8.l2"
+          ],
+          "successCheckpoint": "Mix file saved"
+        },
+        {
+          "id": "m8.l4",
+          "title": "Critical listen and fix list",
+          "estimatedMinutes": 30,
+          "track": "dj",
+          "summary": "Listen next day if possible. Mark timestamps for trainwrecks, double bass, abrupt cuts.",
+          "whyItMatters": [
+            "Critique is a skill.",
+            "Fixes should be specific."
+          ],
+          "exercise": {
+            "title": "Three improvements",
+            "description": "Write exactly 3 timestamped improvements for take 2.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Full listen done",
+            "3 timestamped fixes",
+            "One thing that already worked noted"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m8.l3"
+          ],
+          "successCheckpoint": "Fix list ready"
+        },
+        {
+          "id": "m8.l5",
+          "title": "Second take",
+          "estimatedMinutes": 45,
+          "track": "dj",
+          "summary": "Re-record implementing the fix list. Do not chase perfection beyond take 2 for this milestone.",
+          "whyItMatters": [
+            "Iteration builds craft.",
+            "Ship the milestone."
+          ],
+          "exercise": {
+            "title": "Record take 2",
+            "description": "Apply fixes; record again; keep the better take.",
+            "durationMinutes": 40
+          },
+          "checklist": [
+            "Take 2 recorded",
+            "Compared to take 1",
+            "Chose a keeper"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m8.l4"
+          ],
+          "successCheckpoint": "Mix v2 done"
+        },
+        {
+          "id": "m8.l6",
+          "title": "Share safely",
+          "estimatedMinutes": 20,
+          "track": "dj",
+          "summary": "Optional: share with a trusted friend for feedback. Private link fine. No need for public release.",
+          "whyItMatters": [
+            "External ears teach.",
+            "Community later; courage now."
+          ],
+          "exercise": {
+            "title": "Optional share + reflection",
+            "description": "Share or skip. Write 5 sentences: what you learned about beatmatching, phrasing, EQ, nerves, next goal.",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Reflection written",
+            "Next DJ goal chosen (e.g. longer set / new genre)"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m8.l5"
+          ],
+          "successCheckpoint": "DJ capstone complete"
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "title": "Production Capstone: First Finished Track",
+      "track": "production",
+      "order": 9,
+      "estimatedHours": 6,
+      "description": "Arrange, mix lightly, reference, export, and decide what's next.",
+      "lessons": [
+        {
+          "id": "m9.l1",
+          "title": "Arrangement template",
+          "estimatedMinutes": 35,
+          "track": "production",
+          "summary": "Expand your 32-bar sketch into a full mini-track: intro, verse/groove, build, drop/main, outro (adapt names to your genre).",
+          "whyItMatters": [
+            "Structure finishes songs.",
+            "Prevents endless looping."
+          ],
+          "exercise": {
+            "title": "Fill the template",
+            "description": "Aim 2–3 minutes. Copy sections; change one element per section.",
+            "durationMinutes": 30
+          },
+          "checklist": [
+            "Intro present",
+            "Main section present",
+            "Outro present",
+            "Total length ≥2 minutes"
+          ],
+          "resources": [
+            {
+              "title": "freeCodeCamp music production course (arrangement sections)",
+              "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/",
+              "type": "course"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m7.l7"
+          ],
+          "successCheckpoint": "Structure complete"
+        },
+        {
+          "id": "m9.l2",
+          "title": "Fill gaps (FX, risers, silence)",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Transitions between sections need glue: reverse cymbals, noise risers, drums dropping out, or intentional silence.",
+          "whyItMatters": [
+            "Silence is arrangement too.",
+            "Small FX > plugin piles."
+          ],
+          "exercise": {
+            "title": "Three transitions",
+            "description": "Add or simplify 3 section transitions. Remove anything that clutters.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "3 transitions addressed",
+            "At least one moment of reduced elements",
+            "No FX spam"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m9.l1"
+          ],
+          "successCheckpoint": "Transitions present"
+        },
+        {
+          "id": "m9.l3",
+          "title": "Mix: levels and EQ carve",
+          "estimatedMinutes": 45,
+          "track": "production",
+          "summary": "Static mix: faders first, then small EQ cuts for clash (especially kick vs bass, vocal vs synth if any).",
+          "whyItMatters": [
+            "Balance before fancy plugins.",
+            "Clear kick+bass is the beginner win condition."
+          ],
+          "exercise": {
+            "title": "Static mix pass",
+            "description": "Mix in mono briefly if available; ensure kick and bass readable; tame harsh highs.",
+            "durationMinutes": 35
+          },
+          "checklist": [
+            "Fader balance done",
+            "EQ cuts used more than boosts",
+            "Kick+bass clear on headphones"
+          ],
+          "resources": [
+            {
+              "title": "SoundGym (optional ear break)",
+              "url": "https://www.soundgym.co/",
+              "type": "tool"
+            }
+          ],
+          "practiceTools": [
+            "eq-demo"
+          ],
+          "prerequisites": [
+            "m9.l2",
+            "m2.l3"
+          ],
+          "successCheckpoint": "Kick+bass clear"
+        },
+        {
+          "id": "m9.l4",
+          "title": "Space: reverb and delay sparingly",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "One shared reverb send often beats unique reverbs on every track. Keep dry punch on kick.",
+          "whyItMatters": [
+            "Space creates depth.",
+            "Too much reverb washes punch."
+          ],
+          "exercise": {
+            "title": "One send reverb",
+            "description": "Put short/medium reverb on hats or melody via send; keep kick dry.",
+            "durationMinutes": 20
+          },
+          "checklist": [
+            "Reverb on ≤2 element types",
+            "Kick remains dry",
+            "Mix not washed out"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m9.l3"
+          ],
+          "successCheckpoint": "Space under control"
+        },
+        {
+          "id": "m9.l5",
+          "title": "Reference track A/B",
+          "estimatedMinutes": 25,
+          "track": "production",
+          "summary": "A/B against one commercial track in a similar genre/loudness neighborhood (turn yours up/down to compare tone, not ego loudness).",
+          "whyItMatters": [
+            "Calibrates taste.",
+            "Shows missing bass or harshness fast."
+          ],
+          "exercise": {
+            "title": "A/B notes",
+            "description": "Import or play a reference. Write 3 gaps (e.g. my hats louder, my bass thinner).",
+            "durationMinutes": 15
+          },
+          "checklist": [
+            "Reference chosen",
+            "3 gap notes written",
+            "One change applied after A/B"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m9.l4"
+          ],
+          "successCheckpoint": "Reference notes done"
+        },
+        {
+          "id": "m9.l6",
+          "title": "Export and listen on 2 devices",
+          "estimatedMinutes": 30,
+          "track": "production",
+          "summary": "Export WAV + MP3. Listen on phone and headphones/laptop. Note fixes for a future revision — but declare v1 finished.",
+          "whyItMatters": [
+            "Shipping matters.",
+            "Multi-device listening is non-optional."
+          ],
+          "exercise": {
+            "title": "Ship v1",
+            "description": "Export, listen on 2 devices, keep a short fix list for later, celebrate.",
+            "durationMinutes": 25
+          },
+          "checklist": [
+            "WAV or MP3 exported",
+            "Phone listen done",
+            "Second device listen done",
+            "v1 declared done"
+          ],
+          "resources": [],
+          "practiceTools": [],
+          "prerequisites": [
+            "m9.l5"
+          ],
+          "successCheckpoint": "First track shipped"
+        },
+        {
+          "id": "m9.l7",
+          "title": "What's next",
+          "estimatedMinutes": 20,
+          "track": "production",
+          "summary": "Options: DJ your own track, try a new genre, revisit ear training, explore Learning Synths, or follow a longer free course (e.g. freeCodeCamp) now that fundamentals stick.",
+          "whyItMatters": [
+            "Prevents post-capstone void.",
+            "Loops you back into BeatPath drills."
+          ],
+          "exercise": {
+            "title": "Pick next focus",
+            "description": "Choose one: genre deep-dive, DJ Track if unfinished, weekly ear drills, or a guided video course.",
+            "durationMinutes": 10
+          },
+          "checklist": [
+            "Next focus chosen",
+            "Scheduled on calendar",
+            "Bookmarked one deeper resource"
+          ],
+          "resources": [
+            {
+              "title": "freeCodeCamp FL course",
+              "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/",
+              "type": "course"
+            },
+            {
+              "title": "Ableton Learning Synths",
+              "url": "https://learningsynths.ableton.com/",
+              "type": "interactive"
+            },
+            {
+              "title": "Cursa free music/DJ courses hub",
+              "url": "https://cursa.app/free-courses-music-production-and-DJ-mixing-online",
+              "type": "course"
+            }
+          ],
+          "practiceTools": [],
+          "prerequisites": [
+            "m9.l6"
+          ],
+          "successCheckpoint": "Production path complete for v1 goals"
+        }
+      ]
+    }
+  ],
+  "glossarySeed": [
+    {
+      "term": "BPM",
+      "definition": "Beats per minute — the speed of the pulse."
+    },
+    {
+      "term": "Bar (measure)",
+      "definition": "A group of beats; in 4/4, usually 4 beats."
+    },
+    {
+      "term": "Phrase",
+      "definition": "A musical sentence, often 8 or 16 bars in dance music."
+    },
+    {
+      "term": "Cue point",
+      "definition": "A saved position in a track you can jump to quickly."
+    },
+    {
+      "term": "Pitch fader",
+      "definition": "Control that speeds up or slows down a deck to match tempo."
+    },
+    {
+      "term": "Beatmatching",
+      "definition": "Aligning tempo and beats of two tracks so they play in sync."
+    },
+    {
+      "term": "EQ",
+      "definition": "Equalizer — turns bass/mids/highs up or down."
+    },
+    {
+      "term": "Crossfader",
+      "definition": "Slider that blends audible output from one deck toward the other."
+    },
+    {
+      "term": "Crate / playlist",
+      "definition": "A curated set of tracks for a session or vibe."
+    },
+    {
+      "term": "DAW",
+      "definition": "Digital Audio Workstation — software for recording and producing music."
+    },
+    {
+      "term": "MIDI",
+      "definition": "Data for notes and performance; drives virtual instruments."
+    },
+    {
+      "term": "Audio clip",
+      "definition": "Recorded or imported sound on the timeline."
+    },
+    {
+      "term": "Sidechain (ducking)",
+      "definition": "Using one sound (often kick) to automatically lower another (often bass)."
+    },
+    {
+      "term": "Clipping",
+      "definition": "Distortion from signal going above maximum level."
+    },
+    {
+      "term": "WAV / MP3",
+      "definition": "WAV is uncompressed audio; MP3 is compressed for smaller files."
+    },
+    {
+      "term": "Key",
+      "definition": "The tonal center / scale a piece lives in."
+    },
+    {
+      "term": "Sync",
+      "definition": "DJ software feature that auto-matches tempo (and sometimes beats)."
+    },
+    {
+      "term": "Hot cue",
+      "definition": "Quick-jump marker for drops, vocals, or loops."
+    },
+    {
+      "term": "Loop",
+      "definition": "A repeating section; often 4 or 8 bars."
+    },
+    {
+      "term": "Intro / outro",
+      "definition": "Opening and closing sections often used for mixing."
+    },
+    {
+      "term": "Drop",
+      "definition": "High-energy section after a build/break."
+    },
+    {
+      "term": "Gain / trim",
+      "definition": "Input level control before the channel fader."
+    },
+    {
+      "term": "Headphone cue",
+      "definition": "Previewing a track in headphones without sending it to the master."
+    },
+    {
+      "term": "Master",
+      "definition": "The main output the audience hears."
+    },
+    {
+      "term": "Swing",
+      "definition": "Timing shift that delays certain subdivisions for groove."
+    },
+    {
+      "term": "Ghost note",
+      "definition": "Quiet extra hit that adds feel."
+    },
+    {
+      "term": "Pentatonic",
+      "definition": "Five-note scale; friendly for beginners."
+    },
+    {
+      "term": "Bus / send",
+      "definition": "Shared path for effects like reverb used by multiple tracks."
+    },
+    {
+      "term": "Reference track",
+      "definition": "A commercial song used to compare your mix tone and balance."
+    },
+    {
+      "term": "Trainwreck",
+      "definition": "Slang for a badly aligned mix where beats collide messily."
+    },
+    {
+      "term": "Four-on-the-floor",
+      "definition": "Kick drum on every beat (1-2-3-4)."
+    },
+    {
+      "term": "Backbeat",
+      "definition": "Snare/clap emphasis on beats 2 and 4."
+    },
+    {
+      "term": "Frequency",
+      "definition": "How low or high a sound is; measured in Hz."
+    },
+    {
+      "term": "Mud",
+      "definition": "Unclear low-mids from too many competing sounds."
+    },
+    {
+      "term": "Controller",
+      "definition": "Hardware with knobs/pads/faders that controls DJ or DAW software."
+    },
+    {
+      "term": "Interface (audio)",
+      "definition": "Hardware that gets sound in/out of a computer with better quality than basic laptop jacks."
+    },
+    {
+      "term": "Stock plugins",
+      "definition": "Effects and instruments included free with your DAW."
+    },
+    {
+      "term": "CC0 / royalty-free",
+      "definition": "Licenses that allow use of samples without paying royalties (always read terms)."
+    },
+    {
+      "term": "Arrangement",
+      "definition": "How sections are ordered and varied over time."
+    },
+    {
+      "term": "Riyaz",
+      "definition": "Deliberate practice — short, focused, repeated (word borrowed from Indian classical tradition)."
+    }
+  ],
+  "gearTiers": [
+    {
+      "id": "tier0",
+      "title": "₹0 — Skills first",
+      "items": [
+        "Laptop or desktop you already have",
+        "Any headphones (upgrade later)",
+        "Mixxx for DJ",
+        "One free DAW (LMMS / Cakewalk / Waveform Free)",
+        "Free/legal sample content only"
+      ],
+      "note": "Do not buy a controller until you finished Module M5 drills."
+    },
+    {
+      "id": "tier1",
+      "title": "~₹2,000–5,000 — Hear better",
+      "items": [
+        "Closed-back headphones with clearer bass",
+        "Simple cable / adapter if needed",
+        "Notebook for set cards and arrangement notes"
+      ],
+      "note": "Hearing detail matters more than RGB pads."
+    },
+    {
+      "id": "tier2",
+      "title": "~₹5,000–15,000 — Hands-on or cleaner audio",
+      "items": [
+        "Used/entry DJ controller (Numark-class) OR entry audio interface",
+        "Monitor speakers only if room is quiet — headphones still OK"
+      ],
+      "note": "Pick controller if DJ path is primary; interface if recording vocals/instruments."
+    },
+    {
+      "id": "tier3",
+      "title": "~₹25,000–40,000 — When skills are solid",
+      "items": [
+        "Pioneer DDJ-FLX4-class dual-deck controller (check current India street prices)",
+        "Better headphones or entry monitors + basic treatment (blankets/books first)"
+      ],
+      "note": "Buy after you recorded at least one mix and/or one track you are proud of."
+    }
+  ],
+  "softwareMatrix": {
+    "dj": [
+      {
+        "name": "Mixxx",
+        "cost": "Free/FOSS",
+        "platforms": "Win/Mac/Linux",
+        "notes": "Best zero-rupee learning default; full features.",
+        "url": "https://mixxx.org/"
+      },
+      {
+        "name": "Serato DJ Lite",
+        "cost": "Free tier",
+        "platforms": "Win/Mac",
+        "notes": "Industry-common; upgrade path to paid.",
+        "url": "https://serato.com/"
+      },
+      {
+        "name": "rekordbox",
+        "cost": "Free tier",
+        "platforms": "Win/Mac",
+        "notes": "Strong with Pioneer gear; good library tools.",
+        "url": "https://rekordbox.com/"
+      },
+      {
+        "name": "VirtualDJ Home",
+        "cost": "Free tier",
+        "platforms": "Win/Mac",
+        "notes": "Accessible UI; check license for public use.",
+        "url": "https://www.virtualdj.com/"
+      }
+    ],
+    "daw": [
+      {
+        "name": "LMMS",
+        "cost": "Free/FOSS",
+        "platforms": "Win/Mac/Linux",
+        "notes": "Pattern-friendly; great for beats.",
+        "url": "https://lmms.io/"
+      },
+      {
+        "name": "Cakewalk",
+        "cost": "Free (Windows)",
+        "platforms": "Win",
+        "notes": "Full studio features for Windows users.",
+        "url": "https://www.bandlab.com/products/cakewalk"
+      },
+      {
+        "name": "Waveform Free",
+        "cost": "Free",
+        "platforms": "Win/Mac/Linux",
+        "notes": "Modern workflow; good upgrade path.",
+        "url": "https://www.tracktion.com/products/waveform-free"
+      },
+      {
+        "name": "Audacity",
+        "cost": "Free/FOSS",
+        "platforms": "Win/Mac/Linux",
+        "notes": "Editing/recording helper, not a full beat DAW.",
+        "url": "https://www.audacityteam.org/"
+      },
+      {
+        "name": "Reaper",
+        "cost": "Eval + cheap license",
+        "platforms": "Win/Mac/Linux",
+        "notes": "Powerful and lightweight; pay when evaluating ends.",
+        "url": "https://www.reaper.fm/"
+      },
+      {
+        "name": "FL Studio",
+        "cost": "Paid",
+        "platforms": "Win/Mac",
+        "notes": "Very popular for beats; freeCodeCamp course uses it.",
+        "url": "https://www.image-line.com/fl-studio/"
+      },
+      {
+        "name": "Ableton Live",
+        "cost": "Paid",
+        "platforms": "Win/Mac",
+        "notes": "Session view great for ideas; Learning Music pairs well.",
+        "url": "https://www.ableton.com/"
+      },
+      {
+        "name": "Logic Pro",
+        "cost": "Paid",
+        "platforms": "Mac",
+        "notes": "Excellent value on Mac ecosystem.",
+        "url": "https://www.apple.com/logic-pro/"
+      },
+      {
+        "name": "openDAW",
+        "cost": "Free (web)",
+        "platforms": "Browser",
+        "notes": "Educational web DAW to explore; not a full offline replacement yet.",
+        "url": "https://opendaw.org/"
+      }
+    ]
+  },
+  "practiceTools": [
+    {
+      "id": "metronome",
+      "path": "/practice/metronome",
+      "title": "Metronome",
+      "mvp": true
+    },
+    {
+      "id": "beat-pad",
+      "path": "/practice/beat-pad",
+      "title": "16-step beat pad",
+      "mvp": true
+    },
+    {
+      "id": "eq-demo",
+      "path": "/practice/eq-demo",
+      "title": "3-band EQ demo",
+      "mvp": true
+    },
+    {
+      "id": "crossfader",
+      "path": "/practice/crossfader",
+      "title": "Crossfader + bass kill sim",
+      "mvp": true
+    },
+    {
+      "id": "ear-drums",
+      "path": "/practice/ear-drums",
+      "title": "Kick/snare/hat ear trainer",
+      "mvp": true
+    },
+    {
+      "id": "ear-feel",
+      "path": "/practice/ear-feel",
+      "title": "BPM feel trainer",
+      "mvp": false
+    }
+  ],
+  "todayPracticeAlgorithm": {
+    "description": "Pick next incomplete lesson in focus track; after Shared exam (m3.l5), allow DJ or Production focus. Append one rotating drill from completed modules targeting 15–30 minutes total.",
+    "defaultFocus": "shared",
+    "unlockExamLessonId": "m3.l5",
+    "drillRotation": [
+      "metronome",
+      "ear-drums",
+      "beat-pad",
+      "eq-demo",
+      "crossfader"
+    ]
+  },
+  "researchLinks": [
+    {
+      "name": "Ableton Learning Music",
+      "url": "https://learningmusic.ableton.com/"
+    },
+    {
+      "name": "Ableton Learning Synths",
+      "url": "https://learningsynths.ableton.com/"
+    },
+    {
+      "name": "Mixxx",
+      "url": "https://mixxx.org/"
+    },
+    {
+      "name": "Mixxx How To Match Beats",
+      "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats"
+    },
+    {
+      "name": "openDAW",
+      "url": "https://github.com/andremichelle/openDAW"
+    },
+    {
+      "name": "Tone.js",
+      "url": "https://tonejs.github.io/"
+    },
+    {
+      "name": "LMMS",
+      "url": "https://lmms.io/"
+    },
+    {
+      "name": "MusicTheory.net",
+      "url": "https://www.musictheory.net/"
+    },
+    {
+      "name": "LightNote",
+      "url": "https://www.lightnote.co/"
+    },
+    {
+      "name": "SoundGym",
+      "url": "https://www.soundgym.co/"
+    },
+    {
+      "name": "freeCodeCamp FL Studio course",
+      "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/"
+    },
+    {
+      "name": "study-music wiki",
+      "url": "https://github.com/vpavlenko/study-music"
+    },
+    {
+      "name": "best-music-theory-resources",
+      "url": "https://github.com/grades2018/best-music-theory-resources"
+    },
+    {
+      "name": "EarQuiz Frequencies",
+      "url": "https://earquiz.org/EQ_Frequencies/"
+    },
+    {
+      "name": "Cursa music/DJ free courses",
+      "url": "https://cursa.app/free-courses-music-production-and-DJ-mixing-online"
+    }
+  ],
+  "stats": {
+    "moduleCount": 10,
+    "lessonCount": 60,
+    "mvpModules": [
+      "m0",
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m7",
+      "m8",
+      "m9"
+    ],
+    "sharedModules": [
+      "m0",
+      "m1",
+      "m2",
+      "m3"
+    ],
+    "djModules": [
+      "m4",
+      "m5",
+      "m8"
+    ],
+    "productionModules": [
+      "m6",
+      "m7",
+      "m9"
+    ]
+  }
+}

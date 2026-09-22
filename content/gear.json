@@ -1,0 +1,56 @@
+{
+  "currency": "INR",
+  "disclaimer": "Prices are approximate India street/online ranges (2025–2026) and change often. Skills before spend — finish Shared fundamentals with laptop + headphones first.",
+  "tiers": [
+    {
+      "id": "zero",
+      "title": "₹0 — Start today",
+      "range": "₹0",
+      "items": [
+        "Laptop or desktop you already own",
+        "Any headphones or earbuds you have (volume carefully)",
+        "Mixxx (free DJ software)",
+        "One free DAW: LMMS, Cakewalk (Windows), or Waveform Free"
+      ],
+      "note": "You can reach first mix and first track on this tier."
+    },
+    {
+      "id": "headphones",
+      "title": "~₹2–5k — Better headphones",
+      "range": "₹2,000–5,000",
+      "items": [
+        "Closed-back practice headphones (Audio-Technica / Sony / similar entry models)",
+        "Optional: simple Y-splitter if sharing with a phone"
+      ],
+      "note": "Closed-backs help cue mixing and night practice without leaking as much."
+    },
+    {
+      "id": "entry-hw",
+      "title": "~₹5–15k — First hardware step",
+      "range": "₹5,000–15,000",
+      "items": [
+        "Used/entry DJ controller (Numark-class / similar) OR",
+        "USB audio interface for cleaner monitoring and mic/line in",
+        "Still optional — software practice comes first"
+      ],
+      "note": "Buy only after you enjoy daily practice for a few weeks."
+    },
+    {
+      "id": "ready",
+      "title": "~₹25–40k — When you are ready",
+      "range": "₹25,000–40,000",
+      "items": [
+        "Pioneer DDJ-FLX4-class or similar 2-channel controller",
+        "Or a stronger interface + monitors later",
+        "Budget for cables, stands, and hearing protection"
+      ],
+      "note": "Worth it when you know you will keep DJing or producing — not Day 1."
+    }
+  ],
+  "principles": [
+    "Skills before spend",
+    "One tool at a time — don't buy a studio you won't use",
+    "Protect hearing: moderate volume, breaks every 60 minutes",
+    "Prefer official stores and known marketplaces; avoid cracked software 'deals'"
+  ]
+}

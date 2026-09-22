@@ -1,0 +1,458 @@
+{
+  "disclaimer": "Legal free resources only. No warez, cracks, or unpaid course dumps.",
+  "bySkill": {
+    "shared": [
+      {
+        "title": "Ableton Learning Music — Get started",
+        "url": "https://learningmusic.ableton.com/",
+        "type": "interactive",
+        "lessons": [
+          "m0.l1",
+          "m0.l2",
+          "m1.l4",
+          "m3.l2",
+          "m3.l4",
+          "m6.l3",
+          "m7.l1",
+          "m7.l5"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "Mixxx — Free DJ software",
+        "url": "https://mixxx.org/",
+        "type": "tool",
+        "lessons": [
+          "m0.l1",
+          "m0.l4",
+          "m4.l1"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "LMMS",
+        "url": "https://lmms.io/",
+        "type": "tool",
+        "lessons": [
+          "m0.l4",
+          "m6.l1"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "openDAW (web DAW, explore later)",
+        "url": "https://opendaw.org/",
+        "type": "tool",
+        "lessons": [
+          "m0.l4",
+          "m6.l1"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "Tone.js (powers our in-browser tools)",
+        "url": "https://tonejs.github.io/",
+        "type": "docs",
+        "lessons": [
+          "m0.l4"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "MusicTheory.net — rhythm lessons",
+        "url": "https://www.musictheory.net/lessons",
+        "type": "lesson",
+        "lessons": [
+          "m1.l1"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "SoundGym — deeper producer ear training (optional)",
+        "url": "https://www.soundgym.co/",
+        "type": "tool",
+        "lessons": [
+          "m1.l3",
+          "m9.l3"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "best-music-theory-resources list",
+        "url": "https://github.com/grades2018/best-music-theory-resources",
+        "type": "list",
+        "lessons": [
+          "m1.l3"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "EarQuiz Frequencies (optional deeper EQ ears)",
+        "url": "https://earquiz.org/EQ_Frequencies/",
+        "type": "tool",
+        "lessons": [
+          "m2.l1",
+          "m2.l5"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "Mixxx wiki — How To Match Beats (structure notes)",
+        "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+        "type": "docs",
+        "lessons": [
+          "m2.l2",
+          "m3.l1",
+          "m4.l6",
+          "m5.l1",
+          "m5.l2"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "SoundGym School (optional)",
+        "url": "https://www.soundgym.co/site/school?lg=en",
+        "type": "course",
+        "lessons": [
+          "m2.l3"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "Tone.js Sequence docs (for the curious)",
+        "url": "https://tonejs.github.io/docs/14.9.17/classes/Sequence.html",
+        "type": "docs",
+        "lessons": [
+          "m3.l4"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "LightNote — visual theory (optional)",
+        "url": "https://www.lightnote.co/",
+        "type": "interactive",
+        "lessons": [
+          "m3.l5",
+          "m7.l4"
+        ],
+        "skill": "shared"
+      },
+      {
+        "title": "MusicTheory.net",
+        "url": "https://www.musictheory.net/",
+        "type": "lesson",
+        "lessons": [
+          "m3.l5",
+          "m7.l5"
+        ],
+        "skill": "shared"
+      }
+    ],
+    "dj": [
+      {
+        "title": "Mixxx GitHub",
+        "url": "https://github.com/mixxxdj/mixxx",
+        "type": "docs",
+        "lessons": [
+          "m4.l1"
+        ],
+        "skill": "dj"
+      },
+      {
+        "title": "Mixxx Manual",
+        "url": "https://mixxx.org/manual/latest/",
+        "type": "docs",
+        "lessons": [
+          "m4.l1",
+          "m4.l2",
+          "m8.l3"
+        ],
+        "skill": "dj"
+      },
+      {
+        "title": "BeatPath EQ demo (concept refresh)",
+        "url": "/practice/eq-demo",
+        "type": "tool",
+        "lessons": [
+          "m5.l5"
+        ],
+        "skill": "dj"
+      }
+    ],
+    "production": [
+      {
+        "title": "Homestudio Grooves — free DAWs overview",
+        "url": "https://homestudiogrooves.com/free-daws-for-beginners/",
+        "type": "article",
+        "lessons": [
+          "m6.l1"
+        ],
+        "skill": "production"
+      },
+      {
+        "title": "Learning Synths (optional sound design)",
+        "url": "https://learningsynths.ableton.com/",
+        "type": "interactive",
+        "lessons": [
+          "m7.l5",
+          "m9.l7"
+        ],
+        "skill": "production"
+      },
+      {
+        "title": "study-music resource wiki (theory/sound lists)",
+        "url": "https://github.com/vpavlenko/study-music",
+        "type": "list",
+        "lessons": [
+          "m7.l6"
+        ],
+        "skill": "production"
+      },
+      {
+        "title": "freeCodeCamp FL Studio course (optional parallel video)",
+        "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/",
+        "type": "course",
+        "lessons": [
+          "m7.l7",
+          "m9.l1",
+          "m9.l7"
+        ],
+        "skill": "production"
+      },
+      {
+        "title": "Cursa free music/DJ courses hub",
+        "url": "https://cursa.app/free-courses-music-production-and-DJ-mixing-online",
+        "type": "course",
+        "lessons": [
+          "m9.l7"
+        ],
+        "skill": "production"
+      }
+    ],
+    "general": []
+  },
+  "all": [
+    {
+      "title": "Ableton Learning Music — Get started",
+      "url": "https://learningmusic.ableton.com/",
+      "type": "interactive",
+      "lessons": [
+        "m0.l1",
+        "m0.l2",
+        "m1.l4",
+        "m3.l2",
+        "m3.l4",
+        "m6.l3",
+        "m7.l1",
+        "m7.l5"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "Mixxx — Free DJ software",
+      "url": "https://mixxx.org/",
+      "type": "tool",
+      "lessons": [
+        "m0.l1",
+        "m0.l4",
+        "m4.l1"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "LMMS",
+      "url": "https://lmms.io/",
+      "type": "tool",
+      "lessons": [
+        "m0.l4",
+        "m6.l1"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "openDAW (web DAW, explore later)",
+      "url": "https://opendaw.org/",
+      "type": "tool",
+      "lessons": [
+        "m0.l4",
+        "m6.l1"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "Tone.js (powers our in-browser tools)",
+      "url": "https://tonejs.github.io/",
+      "type": "docs",
+      "lessons": [
+        "m0.l4"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "MusicTheory.net — rhythm lessons",
+      "url": "https://www.musictheory.net/lessons",
+      "type": "lesson",
+      "lessons": [
+        "m1.l1"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "SoundGym — deeper producer ear training (optional)",
+      "url": "https://www.soundgym.co/",
+      "type": "tool",
+      "lessons": [
+        "m1.l3",
+        "m9.l3"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "best-music-theory-resources list",
+      "url": "https://github.com/grades2018/best-music-theory-resources",
+      "type": "list",
+      "lessons": [
+        "m1.l3"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "EarQuiz Frequencies (optional deeper EQ ears)",
+      "url": "https://earquiz.org/EQ_Frequencies/",
+      "type": "tool",
+      "lessons": [
+        "m2.l1",
+        "m2.l5"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "Mixxx wiki — How To Match Beats (structure notes)",
+      "url": "https://github.com/mixxxdj/mixxx/wiki/How-To-Match-Beats",
+      "type": "docs",
+      "lessons": [
+        "m2.l2",
+        "m3.l1",
+        "m4.l6",
+        "m5.l1",
+        "m5.l2"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "SoundGym School (optional)",
+      "url": "https://www.soundgym.co/site/school?lg=en",
+      "type": "course",
+      "lessons": [
+        "m2.l3"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "Tone.js Sequence docs (for the curious)",
+      "url": "https://tonejs.github.io/docs/14.9.17/classes/Sequence.html",
+      "type": "docs",
+      "lessons": [
+        "m3.l4"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "LightNote — visual theory (optional)",
+      "url": "https://www.lightnote.co/",
+      "type": "interactive",
+      "lessons": [
+        "m3.l5",
+        "m7.l4"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "MusicTheory.net",
+      "url": "https://www.musictheory.net/",
+      "type": "lesson",
+      "lessons": [
+        "m3.l5",
+        "m7.l5"
+      ],
+      "skill": "shared"
+    },
+    {
+      "title": "Mixxx GitHub",
+      "url": "https://github.com/mixxxdj/mixxx",
+      "type": "docs",
+      "lessons": [
+        "m4.l1"
+      ],
+      "skill": "dj"
+    },
+    {
+      "title": "Mixxx Manual",
+      "url": "https://mixxx.org/manual/latest/",
+      "type": "docs",
+      "lessons": [
+        "m4.l1",
+        "m4.l2",
+        "m8.l3"
+      ],
+      "skill": "dj"
+    },
+    {
+      "title": "BeatPath EQ demo (concept refresh)",
+      "url": "/practice/eq-demo",
+      "type": "tool",
+      "lessons": [
+        "m5.l5"
+      ],
+      "skill": "dj"
+    },
+    {
+      "title": "Homestudio Grooves — free DAWs overview",
+      "url": "https://homestudiogrooves.com/free-daws-for-beginners/",
+      "type": "article",
+      "lessons": [
+        "m6.l1"
+      ],
+      "skill": "production"
+    },
+    {
+      "title": "Learning Synths (optional sound design)",
+      "url": "https://learningsynths.ableton.com/",
+      "type": "interactive",
+      "lessons": [
+        "m7.l5",
+        "m9.l7"
+      ],
+      "skill": "production"
+    },
+    {
+      "title": "study-music resource wiki (theory/sound lists)",
+      "url": "https://github.com/vpavlenko/study-music",
+      "type": "list",
+      "lessons": [
+        "m7.l6"
+      ],
+      "skill": "production"
+    },
+    {
+      "title": "freeCodeCamp FL Studio course (optional parallel video)",
+      "url": "https://www.freecodecamp.org/news/learn-music-production-with-fl-studio/",
+      "type": "course",
+      "lessons": [
+        "m7.l7",
+        "m9.l1",
+        "m9.l7"
+      ],
+      "skill": "production"
+    },
+    {
+      "title": "Cursa free music/DJ courses hub",
+      "url": "https://cursa.app/free-courses-music-production-and-DJ-mixing-online",
+      "type": "course",
+      "lessons": [
+        "m9.l7"
+      ],
+      "skill": "production"
+    }
+  ]
+}
