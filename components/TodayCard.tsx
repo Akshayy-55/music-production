@@ -110,6 +110,14 @@ export function TodayCard() {
                 <p className="mt-1 line-clamp-2 text-sm text-zinc-400">
                   {next.summary}
                 </p>
+                {next.practiceTools.some((t) =>
+                  ["listen-maker", "song-map"].includes(t)
+                ) && (
+                  <p className="mt-2 text-xs text-cyan-300/90">
+                    Guided studio clips are inside this lesson — you do not pick
+                    songs.
+                  </p>
+                )}
               </>
             ) : (
               <p className="mt-2 text-zinc-300">Path finished on this device.</p>

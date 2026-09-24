@@ -231,14 +231,18 @@ export type DrillId =
   | "eq-demo"
   | "crossfader"
   | "ear-feel"
-  | "mixer";
+  | "mixer"
+  | "listen-maker"
+  | "song-map";
 
 const DRILL_ROTATION: DrillId[] = [
   "metronome",
+  "listen-maker",
   "ear-drums",
   "beat-pad",
   "eq-demo",
   "crossfader",
+  "song-map",
   "ear-feel",
   "mixer",
 ];
