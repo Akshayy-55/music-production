@@ -20,6 +20,7 @@ export interface Lesson {
   summary: string;
   whyItMatters: string[];
   exercise: Exercise;
+  howTo?: string[];
   checklist: string[];
   resources: Resource[];
   practiceTools: string[];

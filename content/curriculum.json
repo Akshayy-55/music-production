@@ -78,14 +78,20 @@
             "Producers use this to copy structure without copying melodies."
           ],
           "exercise": {
-            "title": "Mark three songs",
-            "description": "Pick 3 tracks you like. For each, note: approx BPM feel (slow/medium/fast), where the first big energy change is, and whether drums stay constant.",
+            "title": "Walk three studio clips",
+            "description": "Play Night Bus, Warehouse Pulse, and Rooftop Drop in the studio below. Follow the coach: feel the speed, watch the marked change, then answer the three questions. You do not pick your own songs.",
             "durationMinutes": 20
           },
+          "howTo": [
+            "Press Play on Night Bus. First pass: only decide slow / medium / fast. Do not hunt for details yet.",
+            "Watch the timeline. When the coach highlights a change, name it in your head: what entered or left?",
+            "Answer the three questions. Wrong answers show exactly what happened — that is the lesson.",
+            "Repeat for Warehouse Pulse and Rooftop Drop. Then write one sentence: the feeling you want your first mix or track to have."
+          ],
           "checklist": [
-            "Song 1 notes done",
-            "Song 2 notes done",
-            "Song 3 notes done",
+            "Night Bus — I heard the bass drop out and come back",
+            "Warehouse Pulse — I heard the kick and bass enter after the hats",
+            "Rooftop Drop — I heard drums leave, then slam back",
             "I wrote one sentence: what I want my first mix or track to feel like"
           ],
           "resources": [
@@ -95,11 +101,13 @@
               "type": "interactive"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "listen-maker"
+          ],
           "prerequisites": [
             "m0.l1"
           ],
-          "successCheckpoint": "Active-listening notes for 3 songs"
+          "successCheckpoint": "Three studio clips heard and checked"
         },
         {
           "id": "m0.l3",
@@ -226,14 +234,19 @@
             "Producers set project BPM so drums grid correctly."
           ],
           "exercise": {
-            "title": "Tap tempo on five songs",
-            "description": "Use the BeatPath metronome tap feature (or tap along) on 5 songs. Guess slow/medium/fast, then check any BPM shown in files/apps if available.",
+            "title": "Feel three studio tempos, then tap",
+            "description": "Replay Night Bus (88), Warehouse Pulse (122), and Rooftop Drop (148) in Listen like a maker. Guess slow / medium / fast before you look at the number. Then open the metronome and tap along with Warehouse Pulse's 122 feel.",
             "durationMinutes": 15
           },
+          "howTo": [
+            "Open Listen like a maker. Play each clip once with your eyes off the BPM label if you can.",
+            "Say slow, medium, or fast out loud before the coach confirms it.",
+            "Open the metronome, set 122, and tap along so the number has a body feeling."
+          ],
           "checklist": [
-            "Tapped 5 songs",
+            "I felt slow / medium / fast on the three studio clips",
             "I can explain BPM in one sentence",
-            "I know my favorite genre's usual BPM range roughly"
+            "I tapped along on the metronome at a medium tempo"
           ],
           "resources": [
             {
@@ -243,12 +256,13 @@
             }
           ],
           "practiceTools": [
+            "listen-maker",
             "metronome"
           ],
           "prerequisites": [
             "m0.l5"
           ],
-          "successCheckpoint": "5 taps practiced"
+          "successCheckpoint": "Studio tempos felt; metronome tapped"
         },
         {
           "id": "m1.l2",
@@ -612,13 +626,18 @@
             "Predictable song building."
           ],
           "exercise": {
-            "title": "Phrase map two tracks",
-            "description": "In two dance tracks, mark (timestamp or tally) where you feel a new phrase. Confirm they often land every 8 or 16 bars.",
+            "title": "Tap phrases on Club Map",
+            "description": "Open Song map, switch to Tap phrases, and play Club Map. Tap New phrase each time the energy or pattern restarts (every 8 bars). Then answer the three map questions.",
             "durationMinutes": 15
           },
+          "howTo": [
+            "Press Play map. Count 1–8 with the kick.",
+            "When bar 9 hits (groove), tap New phrase. Same at the break and the drop.",
+            "Compare your tap count to the 8-bar grid on the timeline. Then take the quiz."
+          ],
           "checklist": [
-            "Track A phrase marks done",
-            "Track B phrase marks done",
+            "I played Club Map and watched an 8-bar phrase land",
+            "I tapped New phrase at least at groove / break / drop",
             "I can explain phrase in one sentence"
           ],
           "resources": [
@@ -629,12 +648,13 @@
             }
           ],
           "practiceTools": [
+            "song-map",
             "metronome"
           ],
           "prerequisites": [
             "m1.l2"
           ],
-          "successCheckpoint": "Phrase maps complete"
+          "successCheckpoint": "Phrase taps on Club Map"
         },
         {
           "id": "m3.l2",
@@ -647,14 +667,19 @@
             "Producers copy shapes before inventing new ones."
           ],
           "exercise": {
-            "title": "Label one reference",
-            "description": "Pick one track. Label sections: intro / main / break / drop / outro (skip what does not apply).",
+            "title": "Ride the labeled Club Map",
+            "description": "Play Club Map from the start (or jump the colored blocks). Watch intro → groove → break → drop → outro. Answer the map questions. The intro is the longest mix-friendly runway here.",
             "durationMinutes": 15
           },
+          "howTo": [
+            "Stay on Watch sections. Play from the top once without jumping.",
+            "On the second pass, click Intro, Break, and Drop so you hear each landing in isolation.",
+            "Take the quiz. Remember: names vary; the energy shape is the point."
+          ],
           "checklist": [
-            "Reference chosen",
-            "Sections labeled",
-            "I noted the longest mix-friendly stretch"
+            "I played every section of Club Map",
+            "I answered the map questions",
+            "I noted the longest mix-friendly stretch (the 8-bar intro)"
           ],
           "resources": [
             {
@@ -663,11 +688,13 @@
               "type": "interactive"
             }
           ],
-          "practiceTools": [],
+          "practiceTools": [
+            "song-map"
+          ],
           "prerequisites": [
             "m3.l1"
           ],
-          "successCheckpoint": "Section labels complete"
+          "successCheckpoint": "Club Map sections heard"
         },
         {
           "id": "m3.l3",
@@ -680,20 +707,27 @@
             "Guides arrangement intensity."
           ],
           "exercise": {
-            "title": "Draw one curve",
-            "description": "On paper or notes, draw energy (low→high) across your reference track's sections.",
+            "title": "Read the Club Map curve",
+            "description": "Open Song map → Energy curve. Play the sketch and watch the line: low intro, higher groove, hole in the break, peak on the drop, fade in the outro. The drop is the peak.",
             "durationMinutes": 10
           },
+          "howTo": [
+            "Switch to Energy curve and press Play map.",
+            "Say the shape out loud: runway, dance, hole, slam, fade.",
+            "Answer the map questions. Later you can sketch this same shape on any song you love."
+          ],
           "checklist": [
-            "Energy curve sketched",
-            "I marked the peak moment"
+            "I watched the energy curve while Club Map played",
+            "I marked the peak moment (the drop)"
           ],
           "resources": [],
-          "practiceTools": [],
+          "practiceTools": [
+            "song-map"
+          ],
           "prerequisites": [
             "m3.l2"
           ],
-          "successCheckpoint": "Curve done"
+          "successCheckpoint": "Curve read on Club Map"
         },
         {
           "id": "m3.l4",
@@ -2420,6 +2454,18 @@
       "path": "/practice/ear-feel",
       "title": "BPM feel trainer",
       "mvp": false
+    },
+    {
+      "id": "listen-maker",
+      "path": "/practice/listen-maker",
+      "title": "Listen like a maker",
+      "mvp": true
+    },
+    {
+      "id": "song-map",
+      "path": "/practice/song-map",
+      "title": "Song map",
+      "mvp": true
     }
   ],
   "todayPracticeAlgorithm": {
@@ -2428,10 +2474,12 @@
     "unlockExamLessonId": "m3.l5",
     "drillRotation": [
       "metronome",
+      "listen-maker",
       "ear-drums",
       "beat-pad",
       "eq-demo",
       "crossfader",
+      "song-map",
       "ear-feel",
       "mixer"
     ]

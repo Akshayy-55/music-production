@@ -14,6 +14,7 @@ import { Checklist } from "@/components/Checklist";
 import { InstructorTip } from "@/components/InstructorTip";
 import { GearBlurb } from "@/components/GearBlurb";
 import { LessonComplete } from "@/components/LessonComplete";
+import { LessonStudio } from "@/components/LessonStudio";
 import { getInstructorTip } from "@/lib/instructor-tips";
 import { Clock, ArrowRight, ArrowLeft, ExternalLink, Wrench } from "lucide-react";
 import glossary from "@/content/glossary.json";
@@ -178,6 +179,13 @@ export default async function LessonPage({
           ~{lesson.exercise.durationMinutes} min
         </p>
         <p className="mt-2 text-zinc-300">{lesson.exercise.description}</p>
+        {lesson.howTo && lesson.howTo.length > 0 && (
+          <ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm text-zinc-300">
+            {lesson.howTo.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        )}
         {lesson.practiceTools.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {lesson.practiceTools.map((t) => {
@@ -189,12 +197,13 @@ export default async function LessonPage({
                   href={href}
                   className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/10 px-3 py-1.5 text-sm text-cyan-200 hover:bg-cyan-500/20"
                 >
-                  <Wrench className="h-3.5 w-3.5" /> Open {t}
+                  <Wrench className="h-3.5 w-3.5" /> Open {t} full page
                 </Link>
               );
             })}
           </div>
         )}
+        <LessonStudio lessonId={lesson.id} tools={lesson.practiceTools} />
       </section>
 
       <section className="mt-8">
@@ -245,7 +254,7 @@ export default async function LessonPage({
           Glossary chips
         </h2>
         <GlossaryChips
-          text={`${lesson.title} ${lesson.summary} ${lesson.whyItMatters.join(" ")} ${lesson.exercise.description}`}
+          text={`${lesson.title} ${lesson.summary} ${lesson.whyItMatters.join(" ")} ${lesson.exercise.description} ${(lesson.howTo ?? []).join(" ")}`}
         />
       </section>
 
