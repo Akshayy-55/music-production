@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+// Quiz uses the same hooks.
 import { Pause, Play, RotateCcw } from "lucide-react";
 import { ensureAudio, Tone } from "@/lib/tone-helpers";
 import { createStudioKit, secondsPerBar, stopTransport, type StudioKit } from "@/lib/studio-kit";
@@ -72,9 +73,17 @@ function Quiz({
     sample.questions.map(() => null)
   );
   const [revealed, setRevealed] = useState(false);
+  const passed = useRef(false);
 
   const allAnswered = picks.every((p) => p !== null);
   const correct = picks.every((p, i) => p === sample.questions[i].answer);
+
+  useEffect(() => {
+    if (revealed && correct && !passed.current) {
+      passed.current = true;
+      onPass();
+    }
+  }, [revealed, correct, onPass]);
 
   return (
     <div className="mt-5 space-y-4 rounded-xl border border-zinc-700/80 bg-zinc-950/60 p-4">
@@ -125,10 +134,7 @@ function Quiz({
       <button
         type="button"
         disabled={!allAnswered}
-        onClick={() => {
-          setRevealed(true);
-          if (correct) onPass();
-        }}
+        onClick={() => setRevealed(true)}
         className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-zinc-950 disabled:opacity-40"
       >
         {revealed ? (correct ? "Nailed it" : "Check again") : "Reveal answers"}
@@ -322,7 +328,11 @@ export function ListenMaker({
           </button>
         </div>
 
-        <Quiz sample={sample} onPass={() => onPass(sample.id, index)} />
+        <Quiz
+          key={sample.id}
+          sample={sample}
+          onPass={() => onPass(sample.id, index)}
+        />
       </div>
 
       <label className="mt-5 block">
