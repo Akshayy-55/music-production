@@ -99,8 +99,9 @@ export function SongMap({
   const playFrom = useCallback(
     async (startBar: number) => {
       await ensureAudio();
-      if (!kitRef.current) kitRef.current = createStudioKit();
       stop();
+      kitRef.current?.dispose();
+      kitRef.current = createStudioKit();
       Tone.getTransport().bpm.value = CLUB_MAP.bpm;
       CLUB_MAP.schedule(kitRef.current);
       Tone.getTransport().scheduleOnce(() => {
@@ -108,7 +109,7 @@ export function SongMap({
         setBar(CLUB_MAP.bars);
       }, `${CLUB_MAP.bars}:0:0`);
       Tone.getTransport().position = `${startBar}:0:0`;
-      Tone.getTransport().start();
+      Tone.getTransport().start("+0.05");
       setPlaying(true);
       rafRef.current = requestAnimationFrame(tick);
     },

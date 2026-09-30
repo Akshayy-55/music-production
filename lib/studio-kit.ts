@@ -47,9 +47,15 @@ export function createStudioKit(): StudioKit {
 }
 
 export function stopTransport() {
-  Tone.getTransport().stop();
-  Tone.getTransport().cancel();
-  Tone.getTransport().position = 0;
+  const t = Tone.getTransport();
+  t.stop();
+  t.cancel(0);
+  t.position = 0;
+}
+
+/** Schedule a hit on the Transport so replays are not stuck in the past. */
+export function onGrid(when: string, fn: (time: number) => void): number {
+  return Tone.getTransport().schedule(fn, when);
 }
 
 export function secondsPerBar(bpm: number): number {

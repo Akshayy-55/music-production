@@ -2,13 +2,9 @@
 
 import * as Tone from "tone";
 
-let started = false;
-
 export async function ensureAudio(): Promise<void> {
-  if (!started) {
-    await Tone.start();
-    started = true;
-  }
+  // Tone.start() must run on every click — browsers can suspend after the first play.
+  await Tone.start();
   if (Tone.getContext().state !== "running") {
     await Tone.getContext().resume();
   }

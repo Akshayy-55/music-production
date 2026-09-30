@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-// Quiz uses the same hooks.
 import { Pause, Play, RotateCcw } from "lucide-react";
 import { ensureAudio, Tone } from "@/lib/tone-helpers";
 import { createStudioKit, secondsPerBar, stopTransport, type StudioKit } from "@/lib/studio-kit";
@@ -199,8 +198,9 @@ export function ListenMaker({
 
   const play = useCallback(async () => {
     await ensureAudio();
-    if (!kitRef.current) kitRef.current = createStudioKit();
     stop();
+    kitRef.current?.dispose();
+    kitRef.current = createStudioKit();
     const s = LISTEN_SAMPLES[index];
     Tone.getTransport().bpm.value = s.bpm;
     s.schedule(kitRef.current);
@@ -208,7 +208,7 @@ export function ListenMaker({
       stop();
       setBar(s.bars);
     }, `${s.bars}:0:0`);
-    Tone.getTransport().start();
+    Tone.getTransport().start("+0.05");
     setPlaying(true);
     rafRef.current = requestAnimationFrame(tick);
   }, [index, stop, tick]);
