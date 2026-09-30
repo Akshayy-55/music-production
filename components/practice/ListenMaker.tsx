@@ -11,6 +11,7 @@ import {
   type ListenSample,
 } from "@/lib/guided-tracks";
 import { GearChassis } from "@/components/gear/GearChassis";
+import { SignalMeter } from "@/components/practice/SignalMeter";
 import { useProgress } from "@/lib/progress-context";
 import { cn } from "@/lib/utils";
 
@@ -326,6 +327,7 @@ export function ListenMaker({
           >
             <RotateCcw className="h-4 w-4" /> Reset
           </button>
+          <SignalMeter />
         </div>
 
         <Quiz

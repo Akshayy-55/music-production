@@ -55,7 +55,14 @@ export function stopTransport() {
 
 /** Schedule a hit on the Transport so replays are not stuck in the past. */
 export function onGrid(when: string, fn: (time: number) => void): number {
-  return Tone.getTransport().schedule(fn, when);
+  return Tone.getTransport().schedule((time) => {
+    Tone.Draw.schedule(() => {
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("beatpath-hit"));
+      }
+    }, time);
+    fn(time);
+  }, when);
 }
 
 export function secondsPerBar(bpm: number): number {
