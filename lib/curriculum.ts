@@ -125,6 +125,20 @@ export const PRACTICE_TOOLS = [
     href: "/practice/ear-feel",
     minutes: 10,
   },
+  {
+    id: "listen-maker",
+    title: "Listen like a maker",
+    description: "Three studio clips with a coach — speed, energy change, drums.",
+    href: "/practice/listen-maker",
+    minutes: 15,
+  },
+  {
+    id: "song-map",
+    title: "Song map",
+    description: "Labeled intro / groove / break / drop / outro on one sketch.",
+    href: "/practice/song-map",
+    minutes: 12,
+  },
 ] as const;
 
 export function toolHref(toolId: string): string | undefined {

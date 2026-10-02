@@ -40,4 +40,27 @@ export function makeHat(): Tone.MetalSynth {
   });
 }
 
+export function makeBass(): Tone.MonoSynth {
+  return new Tone.MonoSynth({
+    oscillator: { type: "square" },
+    envelope: { attack: 0.02, decay: 0.18, sustain: 0.35, release: 0.16 },
+    filter: { Q: 1, type: "lowpass", rolloff: -12 },
+    filterEnvelope: {
+      attack: 0.01,
+      decay: 0.12,
+      sustain: 0.2,
+      release: 0.2,
+      baseFrequency: 60,
+      octaves: 2.5,
+    },
+  });
+}
+
+export function makePad(): Tone.Synth {
+  return new Tone.Synth({
+    oscillator: { type: "triangle" },
+    envelope: { attack: 0.28, decay: 0.35, sustain: 0.5, release: 0.7 },
+  });
+}
+
 export { Tone };

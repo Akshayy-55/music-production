@@ -39,7 +39,7 @@ npm run smoke
 
 - Next.js 15 (App Router) + TypeScript — static export (`output: 'export'`)
 - Tailwind CSS v4
-- Tone.js (2-channel mixer + decks, metronome, beat pad, EQ, crossfader, ear trainers)
+- Tone.js (2-channel mixer + decks, guided listening clips, song map, metronome, beat pad, EQ, crossfader, ear trainers)
 - lucide-react
 - Versioned `localStorage` progress (`beatpath-progress-v1`)
 
@@ -60,7 +60,7 @@ Edit `content/curriculum.json` to change the path; lesson pages are generated fr
 - `/` — Today’s Practice (next lesson + rotating drill + module progress rings)
 - `/path` — Learning path roadmap (Shared → DJ → Production); DJ/Prod soft-locked until `m3.l5` complete
 - `/modules/[moduleId]`, `/lessons/[lessonId]`
-- `/practice/*` — mixer, decks, metronome, beat-pad, eq-demo, crossfader, ear-drums, ear-feel
+- `/practice/*` — mixer, decks, listen-maker, song-map, metronome, beat-pad, eq-demo, crossfader, ear-drums, ear-feel
 - `/glossary`, `/gear`, `/software`, `/resources`, `/about`
 
 ## Soft-lock

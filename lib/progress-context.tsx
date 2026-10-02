@@ -22,6 +22,7 @@ interface ProgressContextValue {
   progress: ProgressState;
   ready: boolean;
   toggleChecklist: (lessonId: string, index: number) => void;
+  markChecklist: (lessonId: string, index: number) => void;
   completeLesson: (lessonId: string) => void;
   setFocusTrack: (track: TrackId) => void;
   resetProgress: () => void;
@@ -45,16 +46,15 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
   const toggleChecklist = useCallback((lessonId: string, index: number) => {
     setProgress((prev) => {
-      const lessonChecks =
-        prev.checklist[lessonId] ??
-        Array(
-          // length filled inside setChecklistItem via curriculum
-          0
-        );
       const current = prev.checklist[lessonId]?.[index] ?? false;
-      // ensure array exists by reading through setItem
-      void lessonChecks;
       return setItem(prev, lessonId, index, !current);
+    });
+  }, []);
+
+  const markChecklist = useCallback((lessonId: string, index: number) => {
+    setProgress((prev) => {
+      if (prev.checklist[lessonId]?.[index]) return prev;
+      return setItem(prev, lessonId, index, true);
     });
   }, []);
 
@@ -77,11 +77,12 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       progress,
       ready,
       toggleChecklist,
+      markChecklist,
       completeLesson,
       setFocusTrack,
       resetProgress,
     }),
-    [progress, ready, toggleChecklist, completeLesson, setFocusTrack, resetProgress]
+    [progress, ready, toggleChecklist, markChecklist, completeLesson, setFocusTrack, resetProgress]
   );
 
   return (
