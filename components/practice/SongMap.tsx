@@ -6,6 +6,7 @@ import { ensureAudio, Tone } from "@/lib/tone-helpers";
 import { createStudioKit, secondsPerBar, stopTransport, type StudioKit } from "@/lib/studio-kit";
 import { CLUB_MAP, coachAt, sectionAt } from "@/lib/guided-tracks";
 import { GearChassis } from "@/components/gear/GearChassis";
+import { SignalMeter } from "@/components/practice/SignalMeter";
 import { useProgress } from "@/lib/progress-context";
 import { cn } from "@/lib/utils";
 
@@ -99,8 +100,9 @@ export function SongMap({
   const playFrom = useCallback(
     async (startBar: number) => {
       await ensureAudio();
-      if (!kitRef.current) kitRef.current = createStudioKit();
       stop();
+      kitRef.current?.dispose();
+      kitRef.current = createStudioKit();
       Tone.getTransport().bpm.value = CLUB_MAP.bpm;
       CLUB_MAP.schedule(kitRef.current);
       Tone.getTransport().scheduleOnce(() => {
@@ -108,7 +110,7 @@ export function SongMap({
         setBar(CLUB_MAP.bars);
       }, `${CLUB_MAP.bars}:0:0`);
       Tone.getTransport().position = `${startBar}:0:0`;
-      Tone.getTransport().start();
+      Tone.getTransport().start("+0.05");
       setPlaying(true);
       rafRef.current = requestAnimationFrame(tick);
     },
@@ -285,6 +287,7 @@ export function SongMap({
         >
           <RotateCcw className="h-4 w-4" /> Reset
         </button>
+        <SignalMeter />
       </div>
 
       <div className="mt-5 space-y-3 rounded-xl border border-zinc-700/80 bg-zinc-950/60 p-4">

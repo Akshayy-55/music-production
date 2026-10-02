@@ -1,4 +1,4 @@
-import { at, type StudioKit } from "@/lib/studio-kit";
+import { at, onGrid, type StudioKit } from "@/lib/studio-kit";
 
 export type Feel = "slow" | "medium" | "fast";
 
@@ -49,21 +49,37 @@ function hats(
   for (let i = 0; i < steps; i++) {
     const beat = Math.floor(i / (steps / 4));
     const six = (i % (steps / 4)) * (16 / steps);
-    kit.hat.triggerAttackRelease(240, "32n", at(bar, beat, six));
+    onGrid(at(bar, beat, six), (time) => {
+      kit.hat.triggerAttackRelease(240, "32n", time);
+    });
   }
 }
 
 function fourOnFloor(kit: StudioKit, bar: number) {
   for (let beat = 0; beat < 4; beat++) {
-    kit.kick.triggerAttackRelease("C1", "8n", at(bar, beat, 0));
+    onGrid(at(bar, beat, 0), (time) => {
+      kit.kick.triggerAttackRelease("C1", "8n", time);
+    });
   }
 }
 
 function boomBap(kit: StudioKit, bar: number) {
-  kit.kick.triggerAttackRelease("C1", "8n", at(bar, 0, 0));
-  kit.kick.triggerAttackRelease("C1", "8n", at(bar, 2, 0));
-  kit.snare.triggerAttackRelease("16n", at(bar, 1, 0));
-  kit.snare.triggerAttackRelease("16n", at(bar, 3, 0));
+  onGrid(at(bar, 0, 0), (time) => kit.kick.triggerAttackRelease("C1", "8n", time));
+  onGrid(at(bar, 2, 0), (time) => kit.kick.triggerAttackRelease("C1", "8n", time));
+  onGrid(at(bar, 1, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+  onGrid(at(bar, 3, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+}
+
+function bass(kit: StudioKit, note: string, dur: string, when: string) {
+  onGrid(when, (time) => kit.bass.triggerAttackRelease(note, dur, time));
+}
+
+function pad(kit: StudioKit, note: string, dur: string, when: string) {
+  onGrid(when, (time) => kit.pad.triggerAttackRelease(note, dur, time));
+}
+
+function kick(kit: StudioKit, when: string) {
+  onGrid(when, (time) => kit.kick.triggerAttackRelease("C1", "8n", time));
 }
 
 function scheduleNightBus(kit: StudioKit) {
@@ -71,8 +87,8 @@ function scheduleNightBus(kit: StudioKit) {
     boomBap(kit, bar);
     hats(kit, bar, "8n");
     if (bar < 4 || bar >= 6) {
-      kit.bass.triggerAttackRelease("C1", "2n", at(bar, 0, 0));
-      kit.bass.triggerAttackRelease("G0", "4n", at(bar, 2, 0));
+      bass(kit, "C1", "2n", at(bar, 0, 0));
+      bass(kit, "G0", "4n", at(bar, 2, 0));
     }
   }
 }
@@ -82,8 +98,8 @@ function scheduleWarehouse(kit: StudioKit) {
     hats(kit, bar, "8n");
     if (bar >= 4) {
       fourOnFloor(kit, bar);
-      kit.bass.triggerAttackRelease("C1", "4n", at(bar, 0, 0));
-      kit.bass.triggerAttackRelease("C1", "4n", at(bar, 2, 0));
+      bass(kit, "C1", "4n", at(bar, 0, 0));
+      bass(kit, "C1", "4n", at(bar, 2, 0));
     }
   }
 }
@@ -94,9 +110,9 @@ function scheduleRooftop(kit: StudioKit) {
     if (!breakdown) {
       fourOnFloor(kit, bar);
       hats(kit, bar, "16n");
-      kit.bass.triggerAttackRelease("G1", "8n", at(bar, 0, 0));
+      bass(kit, "G1", "8n", at(bar, 0, 0));
     }
-    kit.pad.triggerAttackRelease(breakdown ? "G3" : "D3", "1m", at(bar, 0, 0));
+    pad(kit, breakdown ? "G3" : "D3", "1m", at(bar, 0, 0));
   }
 }
 
@@ -111,28 +127,28 @@ function scheduleClubMap(kit: StudioKit) {
 
     if (intro) {
       hats(kit, bar, "8n");
-      if (bar >= 4) kit.kick.triggerAttackRelease("C1", "8n", at(bar, 0, 0));
+      if (bar >= 4) kick(kit, at(bar, 0, 0));
     } else if (groove) {
       fourOnFloor(kit, bar);
       hats(kit, bar, "8n");
-      kit.snare.triggerAttackRelease("16n", at(bar, 1, 0));
-      kit.snare.triggerAttackRelease("16n", at(bar, 3, 0));
-      kit.bass.triggerAttackRelease("C1", "4n", at(bar, 0, 0));
-      kit.bass.triggerAttackRelease("Eb1", "4n", at(bar, 2, 0));
+      onGrid(at(bar, 1, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+      onGrid(at(bar, 3, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+      bass(kit, "C1", "4n", at(bar, 0, 0));
+      bass(kit, "Eb1", "4n", at(bar, 2, 0));
     } else if (brk) {
-      kit.pad.triggerAttackRelease("G3", "1m", at(bar, 0, 0));
+      pad(kit, "G3", "1m", at(bar, 0, 0));
       if (bar >= 20) hats(kit, bar, "16n");
     } else if (drop) {
       fourOnFloor(kit, bar);
       hats(kit, bar, "16n");
-      kit.snare.triggerAttackRelease("16n", at(bar, 1, 0));
-      kit.snare.triggerAttackRelease("16n", at(bar, 3, 0));
-      kit.bass.triggerAttackRelease("C1", "8n", at(bar, 0, 0));
-      kit.bass.triggerAttackRelease("C1", "8n", at(bar, 2, 0));
-      kit.pad.triggerAttackRelease("C3", "2n", at(bar, 0, 0));
+      onGrid(at(bar, 1, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+      onGrid(at(bar, 3, 0), (time) => kit.snare.triggerAttackRelease("16n", time));
+      bass(kit, "C1", "8n", at(bar, 0, 0));
+      bass(kit, "C1", "8n", at(bar, 2, 0));
+      pad(kit, "C3", "2n", at(bar, 0, 0));
     } else if (outro) {
       hats(kit, bar, "8n");
-      if (bar < 35) kit.kick.triggerAttackRelease("C1", "8n", at(bar, 0, 0));
+      if (bar < 35) kick(kit, at(bar, 0, 0));
     }
   }
 }
